@@ -209,7 +209,7 @@ function newPackAlert() {
 
 //Script for generating 11 new cards in place of starter image
 function newPackUnlimited(){
-    document.getElementById("boosterPackImage").src="base_pack1.jpg";
+    document.getElementById("boosterPackImage").src="base_pack1.JPG";
     resetAll();
     for (i = 1; i <= 11 ; i++){
         let newCardId = 'randomCard';
@@ -227,7 +227,7 @@ function newPackUnlimited(){
 }
 
 function newPackAwakening(){
-    document.getElementById("boosterPackImage").src="awakening_pack1.jpg";
+    document.getElementById("boosterPackImage").src="awakening_pack1.JPG";
     resetAll();
     for (i = 1; i <= 11 ; i++){
         let newCardId = 'randomCard';
@@ -261,7 +261,7 @@ function newPackDreamsEnd(){
 }
 
 function newPackNightmaresDawn(){
-    document.getElementById("boosterPackImage").src="nightmares_dawn_pack1.jpg";
+    document.getElementById("boosterPackImage").src="nightmares_dawn_pack1.JPG";
     resetAll();
     for (i = 1; i <= 11 ; i++){
         let newCardId = 'randomCard';
@@ -278,7 +278,7 @@ function newPackNightmaresDawn(){
 }
 
 function newPackVoiceOfTheStorms(){
-    document.getElementById("boosterPackImage").src="voice_of_the_storms_pack1.jpg";
+    document.getElementById("boosterPackImage").src="voice_of_the_storms_pack1.JPG";
     resetAll();
     for (i = 1; i <= 11 ; i++){
         let newCardId = 'randomCard';
