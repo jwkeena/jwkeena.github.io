@@ -7,12 +7,8 @@
 } */
 
 .pack img {
-
-    outline: 5px solid;
-    outline-color: aquamarine;
     width: 315px;
     height: 450px;
-
 }
 
 /*From https://gist.github.com/ajaegers/52a82619cc191f898ec4*/
@@ -132,58 +128,9 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(204, 53, 15);
 }
-#buttonAllCards {
-    background-color: aquamarine;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
-    width: 325px;
-}
 
-/* Rainbow gradient found at https://stackoverflow.com/questions/40557461/rainbow-gradient-on-text-in-css */
-#buttonUnlimited {    
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+#buttonNewPackTraitorsReach {
+    background-color: gold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    color: black;
-    width: 325px;
+    color: green;
 }
-
-#buttonAwakening {
-    background-color: purple;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: yellow;
-    width: 325px;
-}
-
-#buttonDreamsEnd {
-    background-color: rgb(33, 120, 146);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(201, 204, 39);
-    width: 325px;
-}
-
-#buttonNightmaresDawn {
-    background-color:rgb(42, 116, 19);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: maroon;
-    width: 325px;
-}
-
-#buttonVoiceOfTheStorms {
-    background-color: navy;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(204, 53, 15);
-    width: 325px;
-}
-
-/* adds border, but it conflicts with the clip-path command
-#randomCard1, #randomCard2, #randomCard3, #randomCard4, #randomCard5, #randomCard6, #randomCard7, #randomCard8, #randomCard9, #randomCard10, #randomCard11 { 
-    border-style: inset;
-    border-width: 15px;
-    border-color: purple
-}
-*/
