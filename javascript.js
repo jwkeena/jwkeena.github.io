@@ -1,6 +1,6 @@
 function holographic() { 
     let randomCardId = "randomCard";
-    let randomNumber = Math.floor(Math.random()*12);
+    let randomNumber = Math.floor(Math.random()*11) + 1;
     randomCardId = randomCardId + randomNumber;
     let element = document.getElementById(randomCardId);
     element.className += "holographic";
@@ -1974,5 +1974,5 @@ const traitorsReachLinks = [
     'http://bluefurok.com/TRimages/scurryingweggit_wc_tr.jpg',
     'http://bluefurok.com/TRimages/speagsprouts_wc_tr.jpg',
     'http://bluefurok.com/TRimages/weavewovenanklet_wr_tr.jpg'],
-    
+
 ]
