@@ -1,34 +1,32 @@
-
-/*seems to conflict with the inline-display property .pack {
-    width: 325px;
-    height: 460px;
-    background: aquamarine;
-    box-sizing: border-box; 
-} */
-
 .pack img {
     width: 315px;
     height: 450px;
 }
 
-/*From https://gist.github.com/ajaegers/52a82619cc191f898ec4*/
-@-webkit-keyframes rainbow {
+/*Rainbow effect, adapted from https://gist.github.com/ajaegers/52a82619cc191f898ec4*/
+@keyframes rainbow {
     from {
         filter: hue-rotate(0deg);
         -webkit-filter: hue-rotate(0deg);
+        -moz-filter: hue-rotate(0deg);
+        -o-filter: hue-rotate(0deg);
     }
     to {
-        -webkit-filter: hue-rotate(360deg);
         filter: hue-rotate(360deg);
+        -webkit-filter: hue-rotate(360deg);
+        -moz-filter: hue-rotate(360deg);
+        -o-filter: hue-rotate(360deg);
     }
 }
 
 .holographic {
+    animation: rainbow 2s steps(36) infinite;
     -webkit-animation: rainbow 2s steps(36) infinite;
+    -moz-animation: rainbow 2s steps(36) infinite;
+    -o-animation: rainbow 2s steps(36) infinite;
 }
 
 /* Style common to all cards, adapted from https://jsfiddle.net/pbnz43gf/ */
-
     /* Ensures the back of the card is flipped to the front, not just inverted*/
    .pack .back, .card1 .back1, .card2 .back2, .card3 .back3, .card4 .back4, .card5 .back5, .card6 .back6, .card7 .back7, .card8 .back8, .card9 .back9, .card10 .back10, .card11 .back11 {
         -webkit-transform: rotateY( 180deg );
@@ -57,6 +55,9 @@
         -o-transform-style: preserve-3d;
         transform-style: preserve-3d;
         -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%; 
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
     }
 
     .pack div, .card1 div, .card2 div, .card3 div, .card4 div, .card5 div, .card6 div, .card7 div, .card8 div, .card9 div, .card10 div, .card11 div {
@@ -67,6 +68,7 @@
         backface-visibility: hidden;
  
     }
+/*End of style common to all cards*/
 
 #topBar {
     background: aquamarine;
@@ -91,7 +93,7 @@ body {
 }
 
 .row img {
-    clip-path: inset(9px 9px 9px 9px);
+    clip-path: inset(10px 10px 10px 10px);
 }
 
 #buttonNewPackUnlimited {    

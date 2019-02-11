@@ -6,6 +6,11 @@ function holographic() {
     element.className += "holographic";
 }
 
+function flip0() {
+    let element = document.getElementById('myDiv');
+    element.classList.toggle("flipped");
+}
+
 function flip1() {
     let element = document.getElementById('myDiv1');
     element.classList.toggle("flipped");
@@ -73,6 +78,11 @@ function flipAll() {
     flip9()
     flip10()
     flip11()
+}
+
+function reset0() {
+    const element = document.getElementById('myDiv');
+    element.classList.remove("flipped");
 }
 
 function reset1() {
@@ -153,6 +163,7 @@ function reset11() {
  }
 
  function resetAll() {
+    reset0();
     reset1();
     reset2();
     reset3();
@@ -214,7 +225,9 @@ Array.prototype.shuffle = function() {
 
 function newPackUnlimited(){
     //Changes first image to indicate the type of pack chosen
-    document.getElementById("boosterPackImage").src="base_pack1.JPG";
+    document.getElementById("boosterPackFront").src="base_pack1.JPG";
+    //Changes back of first image to indicate the type of pack chosen (currently don't have this image)
+    document.getElementById("boosterPackBack").src="base_pack1.JPG";
     //Flips all cards over to starting position
     resetAll();
     //Shuffles the IDs of cards in the pack
@@ -222,8 +235,8 @@ function newPackUnlimited(){
 
     //Counts the number of rares in the nested rares array
     let numOfRares = unlimitedLinks[0].length;
-    //Picks a number between 0 and the total number of rares (must add 1 since Math.random doesn't include the final number in its range)
-    let randomRare = Math.floor(Math.random()*(numOfRares + 1));
+    //Picks a number between 0 and the total number of rares. Do NOT add 1 to Math.floor so that index position 0 can be chosen later. Adding 1 can result in blank cards
+    let randomRare = Math.floor(Math.random()*numOfRares);
     //Picks a random rare from the nested array based on the random number just chosen
     let newRare = unlimitedLinks[0][randomRare];
     //Stores the value in the first position of the shuffled IDs array
@@ -233,9 +246,9 @@ function newPackUnlimited(){
 
     //Same process, for 3 uncommons
     let numOfUncommons = unlimitedLinks[1].length;
-    let randomUncommon1 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon2 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon3 = Math.floor(Math.random()*(numOfUncommons + 1));
+    let randomUncommon1 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon2 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon3 = Math.floor(Math.random()*numOfUncommons);
     let newUncommon1 = unlimitedLinks[1][randomUncommon1];
     let newUncommon2 = unlimitedLinks[1][randomUncommon2];
     let newUncommon3 = unlimitedLinks[1][randomUncommon3];
@@ -246,15 +259,15 @@ function newPackUnlimited(){
     document.getElementById(newId3).src = newUncommon2;
     document.getElementById(newId4).src = newUncommon3;
 
-    //Same process, for 7 commons
+    //Same process, for 7 uncommons
     let numOfCommons = unlimitedLinks[2].length;
-    let randomCommon1 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon2 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon3 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon4 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon5 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon6 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon7 = Math.floor(Math.random()*(numOfCommons + 1));
+    let randomCommon1 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon2 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon3 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon4 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon5 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon6 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon7 = Math.floor(Math.random()*numOfCommons);
     let newCommon1 = unlimitedLinks[2][randomCommon1];
     let newCommon2 = unlimitedLinks[2][randomCommon2];
     let newCommon3 = unlimitedLinks[2][randomCommon3];
@@ -262,13 +275,13 @@ function newPackUnlimited(){
     let newCommon5 = unlimitedLinks[2][randomCommon5];
     let newCommon6 = unlimitedLinks[2][randomCommon6];
     let newCommon7 = unlimitedLinks[2][randomCommon7];
-    let newId5= cardOrderArray[4];
-    let newId6= cardOrderArray[5];
-    let newId7= cardOrderArray[6];
-    let newId8= cardOrderArray[7];
-    let newId9= cardOrderArray[8];
-    let newId10= cardOrderArray[9];
-    let newId11= cardOrderArray[10];
+    let newId5 = cardOrderArray[4];
+    let newId6 = cardOrderArray[5];
+    let newId7 = cardOrderArray[6];
+    let newId8 = cardOrderArray[7];
+    let newId9 = cardOrderArray[8];
+    let newId10 = cardOrderArray[9];
+    let newId11 = cardOrderArray[10];
     document.getElementById(newId5).src = newCommon1;
     document.getElementById(newId6).src = newCommon2;
     document.getElementById(newId7).src = newCommon3;
@@ -279,41 +292,35 @@ function newPackUnlimited(){
 
     //1 in 5 chance of a random holo
     let randomHolographic = Math.floor(Math.random()*5);
-    if (randomHolographic === 4) {
-
-        //Pick random rarity type (to designate index 0, 1, or 2 later)
+    if (randomHolographic === 0) {
         let randomHoloRarity = Math.floor(Math.random()*3);
-        //Get length of that rarity type's nested array
         let numOfRandomSet = unlimitedLinks[randomHoloRarity].length;
-        //Pick random card URL from within the random set
-        let randomHolo = Math.floor(Math.random()*(numOfRandomSet + 1));
+        let randomHolo = Math.floor(Math.random()*numOfRandomSet);
         let randomHoloURL = unlimitedLinks[randomHoloRarity][randomHolo];
-        //replace the final common src with random card URL just picked
         document.getElementById(newId11).src = randomHoloURL;
-        //add CSS holographic effect to the card
         let element = document.getElementById(newId11);
         element.className += "holographic";
     }
-
 }
 
 function newPackAwakening(){
-    document.getElementById("boosterPackImage").src="awakening_pack1.JPG";
+    document.getElementById("boosterPackFront").src="awakening_pack1.JPG";
+    document.getElementById("boosterPackBack").src="awakening_pack2.JPG";
     resetAll();
     cardOrderArray.shuffle();
 
     //Rare distribution
     let numOfRares = awakeningLinks[0].length;
-    let randomRare = Math.floor(Math.random()*(numOfRares + 1));
+    let randomRare = Math.floor(Math.random()*numOfRares);
     let newRare = awakeningLinks[0][randomRare];
     let newId1 = cardOrderArray[0];
     document.getElementById(newId1).src = newRare;
 
     //Uncommon distribution
     let numOfUncommons = awakeningLinks[1].length;
-    let randomUncommon1 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon2 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon3 = Math.floor(Math.random()*(numOfUncommons + 1));
+    let randomUncommon1 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon2 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon3 = Math.floor(Math.random()*numOfUncommons);
     let newUncommon1 = awakeningLinks[1][randomUncommon1];
     let newUncommon2 = awakeningLinks[1][randomUncommon2];
     let newUncommon3 = awakeningLinks[1][randomUncommon3];
@@ -326,13 +333,13 @@ function newPackAwakening(){
 
     //Common distribution
     let numOfCommons = awakeningLinks[2].length;
-    let randomCommon1 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon2 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon3 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon4 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon5 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon6 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon7 = Math.floor(Math.random()*(numOfCommons + 1));
+    let randomCommon1 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon2 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon3 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon4 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon5 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon6 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon7 = Math.floor(Math.random()*numOfCommons);
     let newCommon1 = awakeningLinks[2][randomCommon1];
     let newCommon2 = awakeningLinks[2][randomCommon2];
     let newCommon3 = awakeningLinks[2][randomCommon3];
@@ -357,10 +364,10 @@ function newPackAwakening(){
     
     //1 in 5 chance of a random holo
     let randomHolographic = Math.floor(Math.random()*5);
-    if (randomHolographic === 4) {
+    if (randomHolographic === 1) {
         let randomHoloRarity = Math.floor(Math.random()*3);
         let numOfRandomSet = awakeningLinks[randomHoloRarity].length;
-        let randomHolo = Math.floor(Math.random()*(numOfRandomSet + 1));
+        let randomHolo = Math.floor(Math.random()*numOfRandomSet);
         let randomHoloURL = awakeningLinks[randomHoloRarity][randomHolo];
         document.getElementById(newId11).src = randomHoloURL;
         let element = document.getElementById(newId11);
@@ -369,22 +376,23 @@ function newPackAwakening(){
 }
 
 function newPackDreamsEnd(){
-    document.getElementById("boosterPackImage").src="dreams_end_pack1.jpg";
+    document.getElementById("boosterPackFront").src="dreams_end_pack1.jpg";
+    document.getElementById("boosterPackBack").src="dreams_end_pack2.jpg";
     resetAll();
     cardOrderArray.shuffle();
 
-    //Rare distribution
+    //Rare distribution. 
     let numOfRares = dreamsEndLinks[0].length;
-    let randomRare = Math.floor(Math.random()*(numOfRares + 1));
+    let randomRare = Math.floor(Math.random()*numOfRares);
     let newRare = dreamsEndLinks[0][randomRare];
     let newId1 = cardOrderArray[0];
     document.getElementById(newId1).src = newRare;
 
     //Uncommon distribution
     let numOfUncommons = dreamsEndLinks[1].length;
-    let randomUncommon1 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon2 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon3 = Math.floor(Math.random()*(numOfUncommons + 1));
+    let randomUncommon1 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon2 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon3 = Math.floor(Math.random()*numOfUncommons);
     let newUncommon1 = dreamsEndLinks[1][randomUncommon1];
     let newUncommon2 = dreamsEndLinks[1][randomUncommon2];
     let newUncommon3 = dreamsEndLinks[1][randomUncommon3];
@@ -397,13 +405,13 @@ function newPackDreamsEnd(){
 
     //Common distribution
     let numOfCommons = dreamsEndLinks[2].length;
-    let randomCommon1 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon2 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon3 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon4 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon5 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon6 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon7 = Math.floor(Math.random()*(numOfCommons + 1));
+    let randomCommon1 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon2 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon3 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon4 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon5 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon6 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon7 = Math.floor(Math.random()*numOfCommons);
     let newCommon1 = dreamsEndLinks[2][randomCommon1];
     let newCommon2 = dreamsEndLinks[2][randomCommon2];
     let newCommon3 = dreamsEndLinks[2][randomCommon3];
@@ -428,10 +436,10 @@ function newPackDreamsEnd(){
     
     //1 in 5 chance of a random holo
     let randomHolographic = Math.floor(Math.random()*5);
-    if (randomHolographic === 4) {
+    if (randomHolographic === 2) {
         let randomHoloRarity = Math.floor(Math.random()*3);
         let numOfRandomSet = dreamsEndLinks[randomHoloRarity].length;
-        let randomHolo = Math.floor(Math.random()*(numOfRandomSet + 1));
+        let randomHolo = Math.floor(Math.random()*numOfRandomSet);
         let randomHoloURL = dreamsEndLinks[randomHoloRarity][randomHolo];
         document.getElementById(newId11).src = randomHoloURL;
         let element = document.getElementById(newId11);
@@ -440,22 +448,23 @@ function newPackDreamsEnd(){
 }
 
 function newPackNightmaresDawn(){
-    document.getElementById("boosterPackImage").src="nightmares_dawn_pack1.JPG";
+    document.getElementById("boosterPackFront").src="nightmares_dawn_pack1.JPG";
+    document.getElementById("boosterPackBack").src="nightmares_dawn_pack2.jpg";
     resetAll();
     cardOrderArray.shuffle();
 
     //Rare distribution
     let numOfRares = nightmaresDawnLinks[0].length;
-    let randomRare = Math.floor(Math.random()*(numOfRares + 1));
+    let randomRare = Math.floor(Math.random()*numOfRares);
     let newRare = nightmaresDawnLinks[0][randomRare];
     let newId1 = cardOrderArray[0];
     document.getElementById(newId1).src = newRare;
 
     //Uncommon distribution
     let numOfUncommons = nightmaresDawnLinks[1].length;
-    let randomUncommon1 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon2 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon3 = Math.floor(Math.random()*(numOfUncommons + 1));
+    let randomUncommon1 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon2 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon3 = Math.floor(Math.random()*numOfUncommons);
     let newUncommon1 = nightmaresDawnLinks[1][randomUncommon1];
     let newUncommon2 = nightmaresDawnLinks[1][randomUncommon2];
     let newUncommon3 = nightmaresDawnLinks[1][randomUncommon3];
@@ -468,13 +477,13 @@ function newPackNightmaresDawn(){
 
     //Common distribution
     let numOfCommons = nightmaresDawnLinks[2].length;
-    let randomCommon1 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon2 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon3 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon4 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon5 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon6 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon7 = Math.floor(Math.random()*(numOfCommons + 1));
+    let randomCommon1 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon2 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon3 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon4 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon5 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon6 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon7 = Math.floor(Math.random()*numOfCommons);
     let newCommon1 = nightmaresDawnLinks[2][randomCommon1];
     let newCommon2 = nightmaresDawnLinks[2][randomCommon2];
     let newCommon3 = nightmaresDawnLinks[2][randomCommon3];
@@ -499,10 +508,10 @@ function newPackNightmaresDawn(){
     
     //1 in 5 chance of a random holo
     let randomHolographic = Math.floor(Math.random()*5);
-    if (randomHolographic === 4) {
+    if (randomHolographic === 3) {
         let randomHoloRarity = Math.floor(Math.random()*3);
         let numOfRandomSet = nightmaresDawnLinks[randomHoloRarity].length;
-        let randomHolo = Math.floor(Math.random()*(numOfRandomSet + 1));
+        let randomHolo = Math.floor(Math.random()*numOfRandomSet);
         let randomHoloURL = nightmaresDawnLinks[randomHoloRarity][randomHolo];
         document.getElementById(newId11).src = randomHoloURL;
         let element = document.getElementById(newId11);
@@ -511,22 +520,23 @@ function newPackNightmaresDawn(){
 }
 
 function newPackVoiceOfTheStorms(){
-    document.getElementById("boosterPackImage").src="voice_of_the_storms_pack1.JPG";
+    document.getElementById("boosterPackFront").src="voice_of_the_storms_pack1.JPG";
+    document.getElementById("boosterPackBack").src="voice_of_the_storms_pack2.jpg";
     resetAll();
     cardOrderArray.shuffle();
 
     //Rare distribution
     let numOfRares = voiceOfTheStormsLinks[0].length;
-    let randomRare = Math.floor(Math.random()*(numOfRares + 1));
+    let randomRare = Math.floor(Math.random()*numOfRares);
     let newRare = voiceOfTheStormsLinks[0][randomRare];
     let newId1 = cardOrderArray[0];
     document.getElementById(newId1).src = newRare;
 
     //Uncommon distribution
     let numOfUncommons = voiceOfTheStormsLinks[1].length;
-    let randomUncommon1 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon2 = Math.floor(Math.random()*(numOfUncommons + 1));
-    let randomUncommon3 = Math.floor(Math.random()*(numOfUncommons + 1));
+    let randomUncommon1 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon2 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon3 = Math.floor(Math.random()*numOfUncommons);
     let newUncommon1 = voiceOfTheStormsLinks[1][randomUncommon1];
     let newUncommon2 = voiceOfTheStormsLinks[1][randomUncommon2];
     let newUncommon3 = voiceOfTheStormsLinks[1][randomUncommon3];
@@ -539,13 +549,13 @@ function newPackVoiceOfTheStorms(){
 
     //Common distribution
     let numOfCommons = voiceOfTheStormsLinks[2].length;
-    let randomCommon1 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon2 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon3 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon4 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon5 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon6 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon7 = Math.floor(Math.random()*(numOfCommons + 1));
+    let randomCommon1 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon2 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon3 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon4 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon5 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon6 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon7 = Math.floor(Math.random()*numOfCommons);
     let newCommon1 = voiceOfTheStormsLinks[2][randomCommon1];
     let newCommon2 = voiceOfTheStormsLinks[2][randomCommon2];
     let newCommon3 = voiceOfTheStormsLinks[2][randomCommon3];
@@ -573,7 +583,7 @@ function newPackVoiceOfTheStorms(){
     if (randomHolographic === 4) {
         let randomHoloRarity = Math.floor(Math.random()*3);
         let numOfRandomSet = voiceOfTheStormsLinks[randomHoloRarity].length;
-        let randomHolo = Math.floor(Math.random()*(numOfRandomSet + 1));
+        let randomHolo = Math.floor(Math.random()*numOfRandomSet);
         let randomHoloURL = voiceOfTheStormsLinks[randomHoloRarity][randomHolo];
         document.getElementById(newId11).src = randomHoloURL;
         let element = document.getElementById(newId11);
@@ -582,22 +592,23 @@ function newPackVoiceOfTheStorms(){
 }
 
 function newPackTraitorsReach(){
-    document.getElementById("boosterPackImage").src="traitors_reach_pack1.jpg";
+    document.getElementById("boosterPackFront").src="traitors_reach_pack1.jpg";
+    document.getElementById("boosterPackBack").src="traitors_reach_pack1.jpg";
     resetAll();
     cardOrderArray.shuffle();
 
     //Rare distribution
     let numOfRares = traitorsReachLinks[0].length;
-    let randomRare = Math.floor(Math.random()*(numOfRares + 1));
+    let randomRare = Math.floor(Math.random()*numOfRares);
     let newRare = traitorsReachLinks[0][randomRare];
     let newId1 = cardOrderArray[0];
     document.getElementById(newId1).src = newRare;
 
     //Uncommon distribution
     let numOfUncommons = traitorsReachLinks[1].length;
-    let randomUncommon1 = Math.floor(Math.random()*numOfUncommons + 1);
-    let randomUncommon2 = Math.floor(Math.random()*numOfUncommons + 1);
-    let randomUncommon3 = Math.floor(Math.random()*numOfUncommons + 1);
+    let randomUncommon1 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon2 = Math.floor(Math.random()*numOfUncommons);
+    let randomUncommon3 = Math.floor(Math.random()*numOfUncommons);
     let newUncommon1 = traitorsReachLinks[1][randomUncommon1];
     let newUncommon2 = traitorsReachLinks[1][randomUncommon2];
     let newUncommon3 = traitorsReachLinks[1][randomUncommon3];
@@ -610,13 +621,13 @@ function newPackTraitorsReach(){
 
     //Common distribution
     let numOfCommons = traitorsReachLinks[2].length;
-    let randomCommon1 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon2 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon3 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon4 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon5 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon6 = Math.floor(Math.random()*(numOfCommons + 1));
-    let randomCommon7 = Math.floor(Math.random()*(numOfCommons + 1));
+    let randomCommon1 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon2 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon3 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon4 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon5 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon6 = Math.floor(Math.random()*numOfCommons);
+    let randomCommon7 = Math.floor(Math.random()*numOfCommons);
     let newCommon1 = traitorsReachLinks[2][randomCommon1];
     let newCommon2 = traitorsReachLinks[2][randomCommon2];
     let newCommon3 = traitorsReachLinks[2][randomCommon3];
@@ -641,10 +652,10 @@ function newPackTraitorsReach(){
     
     //1 in 5 chance of a random holo
     let randomHolographic = Math.floor(Math.random()*5);
-    if (randomHolographic === 4) {
+    if (randomHolographic === 0) {
         let randomHoloRarity = Math.floor(Math.random()*3);
         let numOfRandomSet = traitorsReachLinks[randomHoloRarity].length;
-        let randomHolo = Math.floor(Math.random()*(numOfRandomSet + 1));
+        let randomHolo = Math.floor(Math.random()*numOfRandomSet);
         let randomHoloURL = traitorsReachLinks[randomHoloRarity][randomHolo];
         document.getElementById(newId11).src = randomHoloURL;
         let element = document.getElementById(newId11);
