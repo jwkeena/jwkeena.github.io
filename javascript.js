@@ -305,7 +305,7 @@ function newPackUnlimited(){
 
 function newPackAwakening(){
     document.getElementById("boosterPackFront").src="awakening_pack1.JPG";
-    document.getElementById("boosterPackBack").src="awakening_pack2.jpg";
+    document.getElementById("boosterPackBack").src="awakening_pack2.JPG";
     resetAll();
     cardOrderArray.shuffle();
 
