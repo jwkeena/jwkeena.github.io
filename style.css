@@ -1,30 +1,126 @@
-.magiNationBar {
-    background: rgb(172, 154, 68);
-    padding: 10px;
-    color: indigo;
-    overflow: auto;
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+html, body, .block {
+  height: 100%;
 }
 
-.magiNation {
-    background-color: black;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color:rgb(172, 154, 68);
+/* Class for when element is above threshold */
+.pin-top {
+  position: relative;
 }
 
-.pokemon {
-    background-image: -webkit-linear-gradient(to right, red, orange, goldenrod, gold);
-    background-image: linear-gradient(to right, red, orange, goldenrod, gold);
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: yellow;
+/* Class for when element is below threshold */
+.pin-bottom {
+  position: relative;
 }
 
-.pokemonBar {
-    background: blue;
-    padding: 10px;
-    color: yellow;
-    overflow: auto;
+/* Class for when element is pinned */
+.pinned {
+  position: fixed !important;
+}
+
+.screenshot {
+width: 100%;
+height: auto;
+}
+
+.pinned + div {
+  padding-top: 64px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.logo1 {
+  width: 55px;
+  height: 55px;
+  display: inline;
+}
+
+.logo2, .logo3 {
+  width: 35px;
+  height: 35px;
+  display: inline;
+  position: relative;
+  top: -10px;
+}
+
+.tech {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.greek, .latin {
+  display: inline-block;
+  margin: 0 auto;
+  width: 50px;
+}
+
+nav ul a,
+nav .brand-logo, .brown-text a, nav li {
+  color: rgb(254,189,131);
+}
+
+.project-title-dark {
+  color: teal;
+  font-weight: bold;
+}
+
+.project-title-light {
+  color: white;
+  font-weight: bold;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
 }
