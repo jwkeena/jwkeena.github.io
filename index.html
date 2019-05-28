@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-    <title>Portfolio</title>
+
+    <title>Justin Keena's Portfolio</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
+    
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- Materialize -->
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    
     <!-- Custom CSS -->
     <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection">
 
 </head>
 <body>
+
+<!-- Resume Modal Structure -->
+
+<div id="resume-modal" class="modal">
+    <div class="modal-header">
+        <a href="Resume.pdf" target="_blank" class="modal-action btn-flat" download>DOWNLOAD PDF</a>
+        <a href="https://nashuacc.academia.edu/JustinKeena/CurriculumVitae"class="modal-action btn-flat" target="_blank">VIEW ACADEMIC CV</a>
+        <a href="#!" class="modal-action modal-close btn-flat">CLOSE</a> 
+    </div>
+    <div class="modal-content" id="modal-content-padding">
+        <img src="images/Resume.jpg" width="100%" height="auto">
+    </div>
+    <div class="modal-header">
+        <a href="Resume.pdf" target="_blank" class="modal-action btn-flat" download>DOWNLOAD PDF</a>
+        <a href="https://nashuacc.academia.edu/JustinKeena/CurriculumVitae"class="modal-action btn-flat" target="_blank">VIEW ACADEMIC CV</a>
+        <a href="#!" class="modal-action modal-close btn-flat">CLOSE</a> 
+    </div>
+</div>
 
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -34,7 +50,7 @@
                 <h5 class="header col s12 light"><b>Full-stack web developer, Classicist, humanities professor</b></h5>
             </div>
             <div class="row center">
-                <a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">View Resume</a>
+                <a href="#resume-modal" id="resume-button" class="btn-large waves-effect waves-light teal btn modal-trigger" data-target="resume-modal">View Resume</a>
             </div>
             <br><br>
         </div>
@@ -332,24 +348,36 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <!-- Materialize scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
 
 <script>
 
-function email() {
-    window.location.href = "mailto:jwkeena@gmail.com";
-};
+    function email() {
+        window.location.href = "mailto:jwkeena@gmail.com";
+    };
 
-function invisibleScroll() {
-    setTimeout(function() {
-        window.scrollBy(0, 10)
-    }, 250)
-};
+    function invisibleScroll() {
+        setTimeout(function() {
+            window.scrollBy(0, 5)
+        }, 250)
+    };
 
-$(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
+    // Opens modal
+    $(document).ready(function(){
+        $('.modal-trigger').leanModal();
+    });
+
+    $("#resume-modal").closeModal({dismissible: true})
+
+    const modal = document.getElementById("resume-modal")
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            console.log("close")
+            modal.style.display = "none";
+        }
+}
 
 </script>
 

@@ -6,32 +6,24 @@
  * Made By MaterializeCSS.com
  */
 
-html, body, .block {
-  height: 100%;
+#resume-modal {
+  background-image: linear-gradient(rgb(176,121,64), teal);
+  /* background-color: rgb(176,121,64); */
 }
 
-/* Class for when element is above threshold */
-.pin-top {
+#modal-content-padding {
+  padding: 0px 36px 0px 36px;
+}
+
+.modal-header {
+  text-align: right;
+  right: 10px;
   position: relative;
+  right: 20px;
 }
 
-/* Class for when element is below threshold */
-.pin-bottom {
-  position: relative;
-}
-
-/* Class for when element is pinned */
-.pinned {
-  position: fixed !important;
-}
-
-.screenshot {
-width: 100%;
-height: auto;
-}
-
-.pinned + div {
-  padding-top: 64px;
+.modal-header a {
+  color: white;
 }
 
 .centered {
