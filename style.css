@@ -16,10 +16,8 @@
 }
 
 .modal-header {
-  text-align: right;
+  text-align: center;
   right: 10px;
-  position: relative;
-  right: 20px;
 }
 
 .modal-header a {
