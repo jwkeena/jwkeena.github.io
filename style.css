@@ -58,6 +58,10 @@ figure.zoom img {
   text-align: center;
 }
 
+.collapsible-body {
+  padding: 28px 28px 0px 28px;
+}
+
 .logo1 {
   width: 55px;
   height: 55px;
