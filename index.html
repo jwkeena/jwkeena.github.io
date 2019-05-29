@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 <head>
 
     <title>Justin Keena's Portfolio</title>
@@ -34,6 +34,7 @@
             </figure>
     </div>
     <div class="modal-bottom centered">
+        <!-- Hiding the modal-close element but keeping it so js can manipulate it in the DOM -->
         <a href="#!" id="modal-close" style="display: none" class="modal-action modal-close btn-flat">CLOSE</a> 
     </div>
 </div>
@@ -53,11 +54,7 @@
             <br><br>
         </div>
     </div>
-    <div class="parallax"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Keble_College_Dining_Hall_2%2C_Oxford%2C_UK_-_Diliff.jpg/1280px-Keble_College_Dining_Hall_2%2C_Oxford%2C_UK_-_Diliff.jpg"></div>
-
-    <!-- Attribute Keble Dining Hall photo -->
-    <!-- By <a href="//commons.wikimedia.org/wiki/User:Diliff" title="User:Diliff">Diliff</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=38954884">Link</a> -->
-
+    <div class="parallax"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Keble_College_Dining_Hall_2%2C_Oxford%2C_UK_-_Diliff.jpg/1280px-Keble_College_Dining_Hall_2%2C_Oxford%2C_UK_-_Diliff.jpg" alt="Keble College Dining Hall"></div>
 </div>
 
 <div class="container">
@@ -312,20 +309,6 @@
         </div>
     </div>
 
-    <!-- <a name="portfolio"></a>
-      <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-          <div class="container">
-            <div class="row center">
-              <h2 class="header col s12 light" style="color: #554337"><b>Contact</b></h2>
-            </div>
-          </div>
-        </div>
-        <div class="parallax"><img src="https://photography.geothunder.com/wp-content/uploads/2010/10/Powerline-Sunset.jpg" alt="Unsplashed background img 2"></div>
-      </div>
-    
-<div class="container"> -->
-
 </div>
       <footer class="page-footer teal">
 
@@ -377,8 +360,7 @@
         zoomer.style.backgroundPosition = x + '% ' + y + '%';
     };
 
-    // If the screen is too small for the zoom function to look good on the resume, open it on a separate page and close the modal
-
+    // If the screen is too small for the zoom function to look good on the resume, open it on a separate page and close the modal invisibly
     let isModalOpen = false
     $("#resume-button").on("click", function () {
         
@@ -388,14 +370,18 @@
 
         if (document.documentElement.clientWidth <=800) {
             window.open("/Resume.pdf");
+
+            // Somehow making this an instant delay causes it to work. If it's not wrapped in a setTimeout, the modal won't close
             setTimeout(function() {
                 document.getElementById("modal-close").click();
                 isModalOpen = false;
             }, 0);
-    }});
+        }
+    });
 
     $(document.body).on("click", function (e) {
-        // If anything BUT the resume button is clicked
+
+        // If anything BUT the resume button is clicked (necessary so it doesn't interfere with previous event listener)
         if (!$(e.target).is("#resume-button")) {
 
             // Then close the modal
@@ -403,8 +389,7 @@
                 document.getElementById("modal-close").click();
                 isModalOpen = false;
             };
-        }
-        
+        };
         
     });
 
@@ -412,27 +397,3 @@
 
 </body>
 </html>
-
- <!--          
-            <div class="card">
-                <a href="https://jwkeena.github.io/videogame-gifs/" target="_blank"><img class="card-img-top" src="images/gifs.png" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">90s Videogame Gifs</h5>
-                        <p class="card-text">A gif generator using jQuery, AJAX calls, and the GIPHY API.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 5/11/19</small>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <a href="https://scratch.mit.edu/projects/273442727/" target="_blank"><img class="card-img-top" src="images/screenshot.png" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Bug Invaders Game</h5>
-                        <p class="card-text">Made in MIT's Scratch and partially inspired by Star Fox 64, this shoot-em-up game in the style of Space Invaders pushes Scratch's lo-fi tech to its limits.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 5/11/19</small>
-                    </div>
-                </div>
- -->
