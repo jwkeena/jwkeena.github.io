@@ -31,11 +31,10 @@
         <a href="#!" class="modal-action modal-close btn-flat">CLOSE</a> 
     </div>
     <div class="modal-content" id="modal-content-padding">
-            <figure id="figure" class="zoom" onmousemove="zoom(event)" ontouchmove="zoom(event)" style="background-image: url(images/Resume.jpg)">
+            <!-- ontouchmove="zoom(event)" -->
+        <figure id="figure" class="zoom" onmousemove="zoom(event)" style="background-image: url(images/Resume.jpg)">
                 <img src="images/Resume.jpg" />
             </figure>
-            <!-- <img src="images/Resume.jpg" width="100%" height="auto" id="resume-image"> -->
-            <!-- <img src="images/Resume.jpg" width="100%" height="auto"> -->
     </div>
     <div class="modal-bottom centered">
         <a href="#!" class="modal-action modal-close btn-flat">CLOSE</a> 
@@ -370,9 +369,7 @@
         $('.modal-trigger').leanModal();
     });
 
-    const figure = document.getElementById("figure");
-    figure.style.backgroundSize = 120;
-
+    // Thanks to https://codepen.io/galulex/pen/eNZRVq
     function zoom(e){
         var zoomer = e.currentTarget;
         e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
@@ -381,8 +378,6 @@
         y = offsetY/zoomer.offsetHeight*100
         zoomer.style.backgroundPosition = x + '% ' + y + '%';
     };
-
-
 
 </script>
 
