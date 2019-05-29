@@ -6,21 +6,44 @@
  * Made By MaterializeCSS.com
  */
 
+figure.zoom {
+  background-position: 50% 50%;
+  background-size: 1200px;
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+figure.zoom img:hover {
+  opacity: 0;
+}
+
+figure.zoom img {
+  transition: opacity .5s;
+  display: block;
+  width: 100%;
+}
+
 #resume-modal {
   background-image: linear-gradient(rgb(176,121,64), teal);
-  /* background-color: rgb(176,121,64); */
 }
 
 #modal-content-padding {
-  padding: 0px 36px 0px 36px;
+  padding: 0px 12px 0px 12px;
 }
 
 .modal-header {
-  text-align: center;
-  right: 10px;
+  position: relative;
+  top: 10px;
 }
 
-.modal-header a {
+.modal-bottom {
+  position: relative;
+  bottom: 10px;
+}
+
+.modal-header a, .modal-bottom a {
   color: white;
 }
 
