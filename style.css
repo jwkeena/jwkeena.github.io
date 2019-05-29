@@ -23,14 +23,20 @@ figure.zoom img {
   transition: opacity .5s;
   display: block;
   width: 100%;
+
 }
 
 #resume-modal {
   background-image: linear-gradient(rgb(176,121,64), teal);
+  padding: 0px;
 }
 
 #modal-content-padding {
-  padding: 0px 12px 0px 12px;
+  padding: 0px 0px 0px 0px;
+}
+
+.modal {
+  padding: 0px
 }
 
 .modal-header {
@@ -41,6 +47,7 @@ figure.zoom img {
 .modal-bottom {
   position: relative;
   bottom: 10px;
+  padding: 12px;
 }
 
 .modal-header a, .modal-bottom a {
