@@ -1,3 +1,48 @@
+html {
+  background-color: #fff8e1
+}
+
+body,
+a {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fixed-sidenav-left {
+  position: fixed;
+  left: 9px;
+  bottom: 50%;
+  z-index: 11;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.fixed-sidenav-right {
+  position: fixed;
+  right: 9px;
+  bottom: 50%;
+  z-index: 11;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.tech-logo {
+  height: 40px;
+}
+
+.section-header {
+  padding: 10px 0px 10px 0px;
+  font-size: 2.1rem;
+}
+
+.btn-large {
+  background-color: goldenrod;
+  margin-right: 5px;
+  margin-top: 20px;
+}
+
 figure.zoom {
   background-position: 50% 50%;
   background-size: 1200px;
@@ -15,11 +60,10 @@ figure.zoom img {
   transition: opacity .5s;
   display: block;
   width: 100%;
-
 }
 
 #resume-modal {
-  background-image: linear-gradient(rgb(176,121,64), teal);
+  background-image: linear-gradient(#fff8e1, goldenrod);
   padding: 0px;
 }
 
@@ -41,12 +85,9 @@ figure.zoom img {
   bottom: 6px;
 }
 
-.modal-header a, .modal-bottom a {
+.modal-header a,
+.modal-bottom a {
   color: white;
-}
-
-.centered {
-  text-align: center;
 }
 
 .collapsible-body {
@@ -54,39 +95,15 @@ figure.zoom img {
 }
 
 .btn-large:hover {
-  color: rgb(121,85,72);
+  background-color: lightslategrey;
 }
 
-.logo1 {
-  width: 55px;
-  height: 55px;
-  display: inline;
-}
-
-.logo2, .logo3 {
-  width: 35px;
-  height: 35px;
-  display: inline;
+.contact-logo {
+  height: 40px;
   position: relative;
-  top: -10px;
-}
-
-.tech {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-}
-
-.greek, .latin {
-  display: inline-block;
-  margin: 0 auto;
-  width: 50px;
-}
-
-nav ul a,
-nav .brand-logo, .brown-text a, nav li {
-  color: rgb(254,189,131);
+  top: 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .project-title-dark {
@@ -94,13 +111,10 @@ nav .brand-logo, .brown-text a, nav li {
   font-weight: bold;
 }
 
-.project-title-light {
-  color: white;
-  font-weight: bold;
-}
 
 p {
   line-height: 2rem;
+  margin: 0;
 }
 
 .sidenav-trigger {
@@ -108,38 +122,12 @@ p {
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 350px;
   line-height: 0;
   height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
+  color: rgba(255, 255, 255, .9);
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
+.parallax-container .section {
+  width: 100%;
 }
