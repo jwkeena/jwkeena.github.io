@@ -1,10 +1,10 @@
-function slideUp() {
-    console.log("go up")
-}
 
-function slideDown() {
-    console.log("go down")
-}
+// Materialize scrollspy http://www.freetimelearning.com/materialize-css/example-codes/scroll-spy.html
+$(document).ready(function(){
+    $('.scrollspy').scrollSpy({
+        scrollOffset: 0
+    });
+  });
 
 function email() {
     window.location.href = "mailto:jwkeena@gmail.com";
@@ -24,7 +24,7 @@ $(document).ready(function () {
 // Initialize carousel
 $(document).ready(function () {
     $('.carousel').carousel({
-        numVisible: 5,
+        numVisible: 3,
         indicators: true
     });
 });

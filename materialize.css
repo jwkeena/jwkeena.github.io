@@ -3451,10 +3451,10 @@ table span.badge {
   margin-right: -0.75rem;
 }
 
-.section {
+/* .section {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
+} */
 
 .section.no-pad {
   padding: 0;
@@ -7509,7 +7509,7 @@ input[type=range]::-ms-thumb {
 .table-of-contents a {
   display: inline-block;
   font-weight: 300;
-  color: #757575;
+  color: darkslategray;
   padding-left: 16px;
   height: 1.5rem;
   line-height: 1.5rem;
@@ -7518,15 +7518,16 @@ input[type=range]::-ms-thumb {
 }
 
 .table-of-contents a:hover {
-  color: #a8a8a8;
+  color: black;
+  font-weight: bold;
   padding-left: 15px;
-  border-left: 1px solid #ee6e73;
+
 }
 
 .table-of-contents a.active {
   font-weight: 500;
   padding-left: 14px;
-  border-left: 2px solid #ee6e73;
+  border-left: 3px solid darkslategray;
 }
 
 .sidenav {
