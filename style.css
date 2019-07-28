@@ -66,6 +66,8 @@ a {
   margin-top: 20px;
 }
 
+btn
+
 figure.zoom {
   background-position: 50% 50%;
   background-size: 1200px;
@@ -140,6 +142,25 @@ figure.zoom img {
 p {
   line-height: 2rem;
   margin: 0;
+}
+
+/* https://stackoverflow.com/questions/4000792/how-can-i-style-code-listings-using-css */
+#portfolio-text {
+  margin: 10px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid goldenrod;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
 }
 
 .parallax-container {
