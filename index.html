@@ -34,7 +34,7 @@
     <main>
 
         <!-- Side Navigation -->
-        <div class="col hide-on-small-only m3 l2 vertical-container" style="z-index: 1000;">
+        <div class="col hide-on-med-and-down m3 l2 vertical-container" style="z-index: 1000;">
             <ul class="section table-of-contents vertical-center"
                 style="position: fixed; z-index: 500; right: 10px; height: 0 auto;">
                 <span class="dot vertical-center" style="z-index: -1"></span>
@@ -117,34 +117,52 @@
 
 
             <div class="container">
-                <div class="section">
-
+     
                     <!-- Resume Buttons -->
                     <div class="row valign-wrapper center">
 
+
                         <div class="col s12">
+                                <img onclick="email()"
+                                class="contact-logo hide-on-small-and-down" title="Email me!" src="images/logo-email.png">
+
+                            <a href="https://github.com/jwkeena?tab=repositories" title="Github Profile"
+                                target="_blank"><img class="contact-logo hide-on-small-and-down" src="images/logo-github.png"></a>
+
                             <a href="#resume-modal" id="resume-button" class="btn-large btn modal-trigger"
                                 data-target="resume-modal">Resume</a>
 
                             <a href="https://nashuacc.academia.edu/JustinKeena/CurriculumVitae" target="_blank"
                                 class="btn-large waves-effect btn modal-trigger" data-target="resume-modal">CV</a>
-
-                            <i onclick="email()" style="position: relative; top: 20px; cursor: pointer;"
-                                class="fa fa-envelope fa-3x" title="Email me!"></i>
-
-
-                            <a href="https://github.com/jwkeena?tab=repositories" title="Github Profile"
-                                target="_blank"><img class="contact-logo" src="images/logo-github.png"></a>
-
-                            <a href="https://www.linkedin.com/in/justin-keena" title="LinkedIn Profile"
-                                target="_blank"><img class="contact-logo"
-                                    src="http://www.logospng.com/images/216/welcome-pd-webpage-home-for-piotrs-interactive-cv-216606.png"></a>
+                            
+                                <a href="https://www.linkedin.com/in/justin-keena" title="LinkedIn Profile"
+                                target="_blank"><img class="contact-logo hide-on-small-and-down"
+                                    src="images/logo-linkedin.png"></a>
 
                             <a href="https://nashuacc.academia.edu/JustinKeena" title="Academia.edu Profile"
-                                target="_blank"><img class="contact-logo"
-                                    src="https://a.academia-assets.com/images/academia-logo-redesign-2015-A.svg"></a>
-
+                                target="_blank"><img class="contact-logo hide-on-small-and-down"
+                                    src="images/logo-academia.png"></a>
                         </div>
+
+                    </div>
+
+                    <div class="row center hide-on-med-and-up">
+
+                        <div class="col s12">
+                            <img onclick="email()" style="cursor: pointer;"
+                                class="contact-logo-mobile" title="Email me!" src="images/logo-email.png">
+
+                            <a href="https://github.com/jwkeena?tab=repositories" title="Github Profile"
+                                target="_blank"><img src="images/logo-github.png" class="contact-logo-mobile"></a>
+
+                            <a href="https://www.linkedin.com/in/justin-keena" title="LinkedIn Profile"
+                                target="_blank"><img
+                                    src="images/logo-linkedin.png" class="contact-logo-mobile"></a>
+
+                            <a href="https://nashuacc.academia.edu/JustinKeena" title="Academia.edu Profile"
+                                target="_blank"><img src="images/logo-academia.png" class="contact-logo-mobile"></a>
+                        </div>
+
                     </div>
 
                     <div class="row valign-wrapper">
@@ -232,7 +250,6 @@
 
                 </div>
 
-            </div>
         </div>
 
 
@@ -240,11 +257,11 @@
         <div id="portfolio" class="section scrollspy">
             <div class="center-align grey darken-1">
                 <div class="section-header">
-                    <span class="center-align amber-text text-lighten-5">my . [ P O R T F O L I O ];</span>
+                    <span class="center-align amber-text text-lighten-5">{my} . " P O R T F O L I O ";</span>
                 </div>
             </div>
             <div class="parallax-container valign-wrapper">
-                <div class="parallax"><img src="images/seahurst.jpg" alt="Unsplashed background img 2"></div>
+                <div class="parallax"><img src="images/seahurst.jpg" alt="Seahurst park, Burien, WA"></div>
             </div>
 
             <div class="container">
