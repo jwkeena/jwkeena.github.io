@@ -101,24 +101,14 @@ figure.zoom img {
 .contact-logo {
   height: 40px;
   position: relative;
-  top: 20px;
+  top: 25px;
   margin-left: 5px;
   cursor: pointer;
 }
 
-.project-title-dark {
-  color: teal;
-  font-weight: bold;
-}
-
-
 p {
   line-height: 2rem;
   margin: 0;
-}
-
-.sidenav-trigger {
-  color: #26a69a;
 }
 
 .parallax-container {
