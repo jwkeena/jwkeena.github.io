@@ -12,11 +12,17 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Materialize -->
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Materialize -->
+    <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <!-- Import font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -25,564 +31,626 @@
 
 <body>
 
-    <!-- Resume Modal Structure -->
-    <div id="resume-modal" class="modal">
-        <div class="modal-header centered">
-            <a href="Resume.pdf" target="_blank" class="modal-action btn-flat" download>DOWNLOAD PDF</a>
-        </div>
-        <div class="modal-content" id="modal-content-padding">
-            <figure id="figure" class="zoom" onmousemove="zoom(event)" ontouchmove="zoom(event)"
-                style="background-image: url(images/Resume.jpg)">
-                <img src="images/Resume.jpg" />
-            </figure>
-        </div>
-        <div class="modal-bottom centered">
-            <a href="Resume.pdf" target="_blank" class="modal-action btn-flat" download>DOWNLOAD PDF</a>
-            <!-- Hiding the modal-close element but keeping it so js can manipulate it in the DOM -->
-            <a href="#!" id="modal-close" style="display: none" class="modal-action modal-close btn-flat">CLOSE</a>
-        </div>
-    </div>
+    <main>
 
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br><br>
-                <h2 class="header center teal-text text-lighten-2">Justin Keena</h2>
-                <div class="row center">
-                    <h5 class="header col s12 light"><b>Full-stack web developer, Classicist, humanities professor</b>
-                    </h5>
-                </div>
-                <div class="row center">
-                    <a href="#resume-modal" id="resume-button" class="btn-large teal btn modal-trigger"
-                        data-target="resume-modal">Resume</a>
-                    <a href="https://nashuacc.academia.edu/JustinKeena/CurriculumVitae" target="_blank"
-                        class="btn-large waves-effect teal btn modal-trigger" data-target="resume-modal">CV</a>
-                </div>
-                <br><br>
-            </div>
-        </div>
-        <div class="parallax"><img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Keble_College_Dining_Hall_2%2C_Oxford%2C_UK_-_Diliff.jpg/1280px-Keble_College_Dining_Hall_2%2C_Oxford%2C_UK_-_Diliff.jpg"
-                alt="Keble College Dining Hall"></div>
-    </div>
-
-    <div class="container">
-        <div class="section">
-
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">face</i></h2>
-                        <h5 class="center">Welcome! Let me introduce myself.</h5>
-
-                        <p class="light">I'm a full-stack web developer based in Manchester, New Hampshire focused on
-                            building logical systems, infusing projects with personal creativity, and writing precise,
-                            elegant code. My languages of choice are JavaScript, HTML, CSS, Latin, and Ancient Greek.
-                        </p>
-                        <div class="centered">
-                            <img class="tech" src="https://unixtitan.net/images/html-transparent-javascript-2.png">
-                            <a href="http://archives.nd.edu/latgramm.htm" target="_blank"><img class="latin"
-                                    src="images/spqr.png"></a>
-                            <a href="http://www.perseus.tufts.edu/hopper/resolveform?redirect=true" target="_blank"><img
-                                    class="greek" src="images/greek.png"></a>
-                            <img src="images/mern.jpg" style="height: 60px">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">grade</i></h2>
-                        <h5 class="center">What makes me unique?</h5>
-
-                        <p class="light">I leverage my background in higher education and the humanities to improve the
-                            whole development process. My knowledge of ancient languages and MA in English have
-                            habituated my mind to the complex syntax and granular linguistic detail of coding. Years of
-                            experience as an Oxford-trained professor of philosophy makes the high-level problem
-                            solving, conceptual abstraction, and skill in logic demanded of seasoned developers natural
-                            to me.</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">code</i></h2>
-                        <h5 class="center">Qualifications and technologies</h5>
-
-                        <p class="light">I am currently enrolled at the University of New Hampshire's <a id="text-link3"
-                                class="all" href=" https://codingbootcamp.unh.edu/" target="_blank">Full Stack Web
-                                Development</a> program, learning a range of technologies including jQuery, React,
-                            Materialize, Bootstrap, Node, Express, MongoDB, MySQL, and Git. My previous education
-                            includes a Master of Studies at Oxford University (Keble College, pictured above), and an MA
-                            in English at the Catholic University of America.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <a name="portfolio"></a>
-    <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row center">
-                    <h2 class="header col s12 light">Projects</h2>
-                </div>
-            </div>
-        </div>
-        <div class="parallax"><img src="images/coding.png" alt="Unsplashed background img 2"></div>
-    </div>
-
-    <br>
-    <br>
-    <br>
-
-    <div class="container">
-
-        <!-- New row -->
-        <div class="row">
-            <h4 class="centered">Full Stack</h4>
-
-            <ul class="collapsible" style="color: teal; opacity: 1 !important;">
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>2-Player Image
-                        Labeler</div>
-                    <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/image_labeler.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://jwkeena.github.io/multiplayer-image-labeler-game/"
-                                        target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/multiplayer-image-labeler-game"
-                                        target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>A multiplayer game that challenges users to use matching words when presented with a
-                                    random GIF. Made with Firebase (realtime database), Bootstrap, jQuery, and the GIPHY
-                                    API. To play, make sure both players have each opened the link or refreshed the page
-                                    before entering their names.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Sequelize Me
-                        Captain!
-                    </div>
-                    <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/cereal.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://calm-reef-35185.herokuapp.com/" target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/sequelize-me-captain" target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>A CRUD cereal tracker made with Sequelize, MySQL, Node, Express, Handlebars using the
-                                    MVC
-                                    design pattern. Custom server, database, and api routing. Add your favorite cereal
-                                    to the collection! Mobile friendly.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Superhero Dating App
-                    </div>
-                    <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/superhero.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://sheltered-scrubland-25190.herokuapp.com/" target="_blank">Demo</a>
-                                    |
-                                    <a href="https://github.com/jwkeena/superhero-dating-app" target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>A survey-based dating website, but for a very exclusive clientele. See which
-                                    superhero is your dream date! Uses Bootstrap, Node, and
-                                    Express
-                                    (GET and POST routes only, stored in memory). Designed for desktop, but
-                                    mobile-compatible.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Videogame Library
-                    </div>
-                    <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/videogame-library.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://secret-taiga-28497.herokuapp.com/" target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/virtual-backlog" target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>A web app for storing a videogame collection, using the Giant Bomb API, Express,
-                                    Node, and Sequelize. On this team project, I was responsible for programming the
-                                    server, database, and database models; designing and integrating the submission
-                                    modals; cleaning up the overall layout with Bootstrap; API routing (both for the
-                                    barcode scanner and the game wiki); and implementing the barcode scanner. Designed
-                                    for desktop, but is mobile compatible (including barcode scanning).</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
+        <!-- Side Navigation -->
+        <div class="col hide-on-med-and-down m3 l2 vertical-container" style="z-index: 1000;">
+            <ul class="section table-of-contents vertical-center"
+                style="position: fixed; z-index: 500; right: 10px; height: 0 auto;">
+                <span class="dot vertical-center" style="z-index: -1"></span>
+                <li class="left-align"><a href="#showcase">showcase</a></li>
+                <li class="left-align"><a href="#about">about</a></li>
+                <li class="left-align"><a href="#portfolio">portfolio</a></li>
             </ul>
         </div>
 
-        <!-- New row -->
-        <div class="row">
+        <!-- Project Showcase -->
+        <div id="showcase" class="section scrollspy">
+            <div class="center-align grey darken-1">
+                <div class="section-header">
+                    <span class="center-align amber-text text-lighten-5">my . [ S H O W C A S E ];</span>
+                </div>
+            </div>
 
-            <h4 class="centered">Front End</h4>
-            <ul class="collapsible" style="color: teal; opacity: 1 !important;">
+            <br>
 
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Ancient Greek
-                        Declensions Quiz</div>
-                    <div class="collapsible-body">
+            <div class="carousel">
+                <a class="carousel-item" title="double-click to open demo links" data-link="https://jwkeena.github.io/super-coin-collector/" href="#a">
+                    <img src="images/super-coin-collector-demo.gif">
+                </a>
+                <a class="carousel-item" title="double-click to open demo links" data-link="https://backlog.neocities.org/letters/" href="#a">
+                    <img src="images/csl-demo.gif">
+                </a>
+                <a class="carousel-item" title="double-click to open demo links" data-link="https://pokemonboosterpack.neocities.org" href="#a">
+                    <img src="images/pokemon-demo.gif">
+                </a>
+                <a class="carousel-item" title="double-click to open demo links" data-link="https://jwkeena.github.io/the-office-character-guessing-game/"
+                    href="#a">
+                    <img src="images/office-demo.gif">
+                </a>
+                <a class="carousel-item" title="double-click to open demo links" data-link="http://plato.usite.pro/index.html" href="#a">
+                    <img src="images/perseus-demo.gif">
+                </a>
+                <a class="carousel-item" title="double-click to open demo links" data-link="https://amandanewton.github.io/ProjectOne/" href="#a">
+                    <img src="images/date-night-demo.gif">
+                </a>
+                <a class="carousel-item" title="double-click to open demo links" data-link="https://secret-taiga-28497.herokuapp.com/" href="#a">
+                    <img src="images/videogame-library-demo.gif">
+                </a>
+            </div>
+        </div>
+
+        <!-- About Me Header -->
+        <div id="about" class="section scrollspy">
+            <div class="section-header nav-wrapper grey darken-1 center">
+                <div class="footer-container">
+                    <span class="center amber-text text-lighten-5">A B O U T . (me);</span>
+                </div>
+            </div>
+
+            <!-- Keble Dining Hall Parallax -->
+            <div class="parallax-container valign-wrapper">
+                <div class="section no-pad-bot">
+                </div>
+                <div class="parallax"><img src="images/keble.jpg" alt="Keble Dining Hall"></div>
+            </div>
+
+            <!-- Resume Modal Structure -->
+            <div id="resume-modal" class="modal">
+                <div class="modal-header center">
+                    <a href="Resume.pdf" target="_blank" class="modal-action btn-flat grey-text text-darken-3"
+                        download>DOWNLOAD PDF</a>
+                </div>
+                <div class="modal-content" id="modal-content-padding">
+                    <figure id="figure" class="zoom" onmousemove="zoom(event)" ontouchmove="zoom(event)"
+                        style="background-image: url(images/Resume.jpg)">
+                        <img src="images/Resume.jpg" />
+                    </figure>
+                </div>
+                <div class="modal-bottom center">
+                    <a href="Resume.pdf" target="_blank" class="modal-action btn-flat" download>DOWNLOAD PDF</a>
+                    <!-- Hiding the modal-close element but keeping it so js can manipulate it in the DOM -->
+                    <a href="#!" id="modal-close" style="display: none"
+                        class="modal-action modal-close btn-flat">CLOSE</a>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <!-- Resume Buttons -->
+                <div class="row valign-wrapper center">
+
+                    <div class="col s12">
+                        <img onclick="email()" class="contact-logo hide-on-small-and-down" title="Email me!"
+                            src="images/logo-email.png">
+
+                        <a href="https://github.com/jwkeena?tab=repositories" title="Github Profile"
+                            target="_blank"><img class="contact-logo hide-on-small-and-down"
+                                src="images/logo-github.png"></a>
+
+                        <a href="#resume-modal" id="resume-button" class="btn-large btn modal-trigger"
+                            data-target="resume-modal">Resume</a>
+
+                        <a href="https://nashuacc.academia.edu/JustinKeena/CurriculumVitae" target="_blank"
+                            class="btn-large waves-effect btn modal-trigger" data-target="resume-modal">CV</a>
+
+                        <a href="https://www.linkedin.com/in/justin-keena" title="LinkedIn Profile" target="_blank"><img
+                                class="contact-logo hide-on-small-and-down" src="images/logo-linkedin.png"></a>
+
+                        <a href="https://nashuacc.academia.edu/JustinKeena" title="Academia.edu Profile"
+                            target="_blank"><img class="contact-logo hide-on-small-and-down"
+                                src="images/logo-academia.png"></a>
+                    </div>
+
+                </div>
+
+                <div class="row center hide-on-med-and-up">
+
+                    <div class="col s12">
+                        <img onclick="email()" style="cursor: pointer;" class="contact-logo-mobile" title="Email me!"
+                            src="images/logo-email.png">
+
+                        <a href="https://github.com/jwkeena?tab=repositories" title="Github Profile"
+                            target="_blank"><img src="images/logo-github.png" class="contact-logo-mobile"></a>
+
+                        <a href="https://www.linkedin.com/in/justin-keena" title="LinkedIn Profile" target="_blank"><img
+                                src="images/logo-linkedin.png" class="contact-logo-mobile"></a>
+
+                        <a href="https://nashuacc.academia.edu/JustinKeena" title="Academia.edu Profile"
+                            target="_blank"><img src="images/logo-academia.png" class="contact-logo-mobile"></a>
+                    </div>
+
+                </div>
+
+                <div class="row valign-wrapper">
+                    <div class="col s12 l12">
+                        <p>I'm a full-stack web developer and professor of Ancient Philosophy
+                            based in Manchester, New Hampshire
+                            focused
+                            on
+                            building logical systems, infusing projects with personal creativity, and
+                            writing
+                            precise,
+                            elegant code. My languages of choice are JavaScript, HTML, CSS, Latin, and
+                            Ancient
+                            Greek.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row valign-wrapper">
+                    <div class="col s12 l12">
+                        <p>I leverage my background in higher education and the humanities to improve the whole
+                            development process. My knowledge of ancient languages and MA in English have habituated
+                            my mind to the complex syntax and granular linguistic detail of coding. Years of
+                            experience as an Oxford-trained professor of philosophy makes the high-level problem
+                            solving, conceptual abstraction, and skill in logic demanded of seasoned developers
+                            natural to me.</p>
+                    </div>
+                </div>
+
+                <div class="row valign-wrapper">
+                    <div class="col s12 l12">
+                        <p>I am currently enrolled at the University of New Hampshire's <a id="text-link3" class="all"
+                                href=" https://codingbootcamp.unh.edu/" target="_blank">Full Stack Web
+                                Development</a> program. My previous
+                            education
+                            includes a Master of Studies at Oxford University (Keble College, pictured
+                            above),
+                            and
+                            an MA in English at the Catholic University of America.</p>
+                    </div>
+                </div>
+
+                <div class="row valign-wrapper center">
+                    <div class="col s12">
+                        <img class="tech-logo" src="images/logo-html.png" title="HTML">
+                        <img class="tech-logo" src="images/logo-postman.png" title="Postman">
+                        <img class="tech-logo" src="images/logo-firebase.png" title="Firebase">
+                        <img class="tech-logo" src="images/logo-materialize.png" title="Materialize">
+                        <img class="tech-logo" src="images/logo-js.png" title="JavaScript">
+                        <img class="tech-logo" src="images/logo-mongodb.png" title="MongoDB">
+                        <img class="tech-logo" src="images/logo-node.png" title="Node">
+                        <img class="tech-logo" src="images/logo-css.png" title="CSS">
+                        <img class="tech-logo" src="images/logo-sequelize.png" title="Sequelize">
+                        <img class="tech-logo" src="images/logo-jquery.png" title="jQuery">
+                        <img class="tech-logo" src="images/logo-react.png" title="React">
+                        <img class="tech-logo" src="images/logo-bootstrap.png" title="Bootstrap">
+                        <img class="tech-logo" src="images/logo-bash.png" title="Git Bash">
+                        <img class="tech-logo" src="images/logo-mysql.png" title="MySQL">
+                        <svg viewbox="0 0 128 128" class="tech-logo" title="Express">
+                            <path
+                                d="M126.67,98.44c-4.56,1.16-7.38.05-9.91-3.75-5.68-8.51-11.95-16.63-18-24.9-.78-1.07-1.59-2.12-2.6-3.45C89,76,81.85,85.2,75.14,94.77c-2.4,3.42-4.92,4.91-9.4,3.7L92.66,62.34,67.6,29.71c4.31-.84,7.29-.41,9.93,3.45,5.83,8.52,12.26,16.63,18.67,25.21C102.65,49.82,109,41.7,115,33.26c2.41-3.42,5-4.72,9.33-3.46-3.28,4.35-6.49,8.63-9.72,12.88-4.36,5.73-8.64,11.53-13.16,17.14-1.61,2-1.35,3.3.09,5.19C109.9,76,118.16,87.1,126.67,98.44Z">
+                            </path>
+                            <path
+                                d="M1.33,61.74c.72-3.61,1.2-7.29,2.2-10.83,6-21.43,30.6-30.34,47.5-17.06C60.93,41.64,63.39,52.62,62.9,65H7.1c-.84,22.21,15.15,35.62,35.53,28.78,7.15-2.4,11.36-8,13.47-15,1.07-3.51,2.84-4.06,6.14-3.06-1.69,8.76-5.52,16.08-13.52,20.66-12,6.86-29.13,4.64-38.14-4.89C5.26,85.89,3,78.92,2,71.39c-.15-1.2-.46-2.38-.7-3.57Q1.33,64.78,1.33,61.74ZM7.2,60.25H57.63c-.33-16.06-10.33-27.47-24-27.57C18.63,32.56,7.85,43.7,7.2,60.25Z">
+                            </path>
+                        </svg>
+                        <img class="tech-logo" src="images/logo-xml.png" title="XML">
+                        <a href="http://archives.nd.edu/latgramm.htm" target="_blank"><img class="tech-logo"
+                                src="images/logo-latin.png" title="Latin"></a>
+                        <a href="http://www.perseus.tufts.edu/hopper/resolveform?redirect=true" target="_blank"><img
+                                class="tech-logo" src="images/logo-greek.png" title="Greek"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Portfolio Section -->
+        <div id="portfolio" class="section scrollspy">
+            <div class="center-align grey darken-1">
+                <div class="section-header">
+                    <span class="center-align amber-text text-lighten-5">my . " P O R T F O L I O ";</span>
+                </div>
+            </div>
+            <div class="parallax-container valign-wrapper">
+                <div class="parallax"><img src="images/seahurst.jpg" alt="Seahurst park, Burien, WA"></div>
+            </div>
+
+            <div class="container portfolio">
+
+                <br>
+
+                <div class="row" id="portfolio-text">
+
+                    <p>my."PORTFOLIO" = { </p>
+
+                    <p class="col offset-s1"><a class="project-title monospace modal-trigger" href="#modal-csl">"C.S.
+                            Lewis Letter Search"</a>:
+                        {"links": [<a href="https://backlog.neocities.org/letters/" target="_blank">"demo"</a>, <a
+                            href="https://backlog.neocities.org/letters/js/search.js" target="_blank">"code"</a>]},
+                    </p>
+
+                    <p class="col offset-s1"><a class="project-title modal-trigger"
+                            href="#modal-super-coin-collector">"Super Coin Collector"</a>:
+                        {"links": [<a href="https://jwkeena.github.io/super-coin-collector/" target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/super-coin-collector" target="_blank">"code"</a>]},
+                    </p>
+
+
+                    <p class="col offset-s1"><span class="project-title modal-trigger"
+                            href="#modal-videogame-library">"Videogame Library"</span>:
+                        {"links": [<a href="https://secret-taiga-28497.herokuapp.com/" target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/virtual-backlog" target="_blank">"code"</a>], "fullStack":
+                        true},
+                    </p>
+
+
+                    <p class="col offset-s1"><a class="project-title modal-trigger"
+                            href="#modal-image-labeler">"2-Player Image Labeler"</a>:
+                        {"links": [<a href="https://jwkeena.github.io/multiplayer-image-labeler-game/"
+                            target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/multiplayer-image-labeler-game" target="_blank">"code"</a>],
+                        "fullStack": true},
+                    </p>
+
+
+                    <p class="col offset-s1"><a class="project-title modal-trigger" href="#modal-pokemon">"Pokemon
+                            Booster Pack Simulator"</a>:
+                        {"links": [<a href="https://pokemonboosterpack.neocities.org" target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/pokemon-booster-pack-simulator"
+                            target="_blank">"code"</a>]},
+                    </p>
+
+                    <p class="col offset-s1"><a class="project-title modal-trigger" href="#modal-perseus">"Perseus
+                            Project XML to JSON Converter"</a>:
+                        {"links": [<a href="http://plato.usite.pro/index.html" target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/perseus-project-api-javascript-integration"
+                            target="_blank">"code"</a>]},
+                    </p>
+
+                    <p class="col offset-s1"><a class="project-title modal-trigger" href="#modal-sequelize">"Sequelize
+                            Me Captain!"</a>:
+                        {"links": [<a href="https://calm-reef-35185.herokuapp.com/" target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/sequelize-me-captain" target="_blank">"code"</a>],
+                        "fullStack": true},
+                    </p>
+
+                    <p class="col offset-s1"><a class="modal-trigger" href="#modal-office"><span
+                                class="project-title">"The Office Character Guessing Game"</span></a>:
+                        {"links": [<a href="https://jwkeena.github.io/the-office-character-guessing-game/"
+                            target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/the-office-character-guessing-game"
+                            target="_blank">"code"</a>]},
+                    </p>
+
+                    <p class="col offset-s1"><a class="project-title modal-trigger" href="#modal-date-night">"Ultimate
+                            Date Night"</a>
+                        {"links": [<a href="https://amandanewton.github.io/ProjectOne/" target="_blank">"demo"</a>,
+                        <a href="https://github.com/amandanewton/ProjectOne" target="_blank">"code"</a>]},
+                    </p>
+
+                    <p class="col offset-s1"><a class="project-title modal-trigger" href="#modal-node-storefront">"Node
+                            Storefront"</a>:
+                        {"links": [<a href="https://drive.google.com/file/d/1KzOt9NHjUq0uLC11X_cb-G76anPPUJuz/view"
+                            target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/bamazon" target="_blank">"code"</a>]},
+                    </p>
+
+                    <p class="col offset-s1"><a class="project-title modal-trigger" href="#modal-node-liri">"Node Movie,
+                            Song, & Concert Search"</a>:
+                        {"links": [<a href="https://drive.google.com/file/d/1SV45M03akrh0nR7AlrjP2PxALx-rMbqO/view"
+                            target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/liri-node-app" target="_blank">"code"</a>]},
+                    </p>
+
+                    <div class="col s11"></div>
+
+                    <p class="col offset-s1">
+                        }
+
+                    </p>
+
+                </div>
+
+                <div id="modal-csl" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>C.S. LEWIS LETTER SEARCH</h4>
+                        <hr>
                         <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/greek-declensions.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://jwkeena.github.io/ancient-greek-declensions-quiz/"
-                                        target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/ancient-greek-declensions-quiz"
-                                        target="_blank">Code</a>
-                                </div>
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH: </b>jQuery, Materialize</p>
+                                <p><b>DESCRIPTION: </b>After writing a custom parser to convert the ~4,000 pages of Word
+                                    Doc
+                                    from their native XML into JavaScript objects, I then built the search engine
+                                    and
+                                    UI. Searches can be
+                                    performed not only for word matches, but also for any combination of recipient,
+                                    year(s), volume(s), and archival location. The UI is elegant and mobile-responsive.
+                                </p>
+
+
                             </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p> Made with jQuery, HTML, and CSS, this educational tool reinforces knowledge of all
-                                    regular Greek nouns with time-based, programmatically generated parsing questions.
-                                    Designed for desktop, but mobile compatible.
+                            <div class="col m12 l6">
+                                <a href="https://backlog.neocities.org/letters/" target="_blank"><img
+                                        class="responsive-img" src="images/csl-demo.gif"></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect  btn-flat">CLOSE</a>
+                    </div>
+                </div>
+
+                <div id="modal-super-coin-collector" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>SUPER COIN COLLECTOR</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> jQuery, jQuery UI, HTML, CSS, JS</p>
+                                <p><b>DESCRIPTION:</b> This Nintendo-inspired
+                                    randomized
+                                    arithmetic game uses custom animation effects and collision detection. Designed
+                                    for desktop. </p>
+                            </div>
+                            <div class="col m12 l6">
+                                <a href="https://jwkeena.github.io/super-coin-collector/" target="_blank"><img
+                                        class="responsive-img" src="images/super-coin-collector-demo.gif"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect  btn-flat">CLOSE</a>
+                    </div>
+                </div>
+
+                <div id="modal-videogame-library" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>VIDEOGAME LIBRARY</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> Express,
+                                    Node, Sequelize, Bootstrap, Giant Bomb API </p>
+                                <p><b>DESCRIPTION:</b> A full-stack app for storing a videogame collection. On this team
+                                    project, I was responsible for programming the
+                                    server, database, and database models; designing and integrating the submission
+                                    modals; cleaning up the overall layout with Bootstrap; API routing; and the barcode
+                                    scanner.
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Bug Invaders</div>
-                    <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/screenshot.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://scratch.mit.edu/projects/273442727/" target="_blank">Demo</a> |
-                                    <a href="https://scratch.mit.edu/projects/273442727/editor/"
-                                        target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>Made in MIT's Scratch and partially inspired by Star Fox 64, this shoot-em-up game in
-                                    the style of Space Invaders pushes Scratch's lo-fi tech to its limits. Designed for
-                                    desktop.</p>
+                            <div class="col m12 l6">
+                                <a href="https://secret-taiga-28497.herokuapp.com/" target="_blank"><img
+                                        class="responsive-img" src="images/videogame-library-demo.gif"></a>
                             </div>
                         </div>
                     </div>
-                </li>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
+                    </div>
+                </div>
 
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Magi Nation Booster
-                        Pack Simulator</div>
-                    <div class="collapsible-body">
+                <div id="modal-image-labeler" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>2-PLAYER IMAGE LABELER</h4>
+                        <hr>
                         <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/magination.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://jwkeena.github.io/magi-nation-booster-pack-simulator/"
-                                        target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/magi-nation-booster-pack-simulator"
-                                        target="_blank">Code</a>
-                                </div>
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> Firebase (realtime database), Bootstrap, jQuery,
+                                    GIPHY API</p>
+                                <p><b>DESCRIPTION:</b> A full-stack multiplayer game that challenges users to use
+                                    matching words when presented
+                                    with a random GIF. To play, make sure both players have each opened the link or
+                                    refreshed
+                                    the
+                                    page before entering their names.
+                                </p>
                             </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>Made with vanilla JavaScript, HTML, and CSS, this web application accurately captures
-                                    the probability, rarity distribution, and experience of the all 5 released sets, and
-                                    1 unreleased set. Features a drafting ability to save pulls from successive packs.
-                                    Mobile friendly.</p>
+                            <div class="col m12 l6">
+                                <a href="https://jwkeena.github.io/multiplayer-image-labeler-game/" target="_blank"><img
+                                        class="responsive-img" src="images/image-labeler-demo.gif"></a>
                             </div>
                         </div>
                     </div>
-                </li>
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Perseus Project XML
-                        to JSON Converter</div>
-                    <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/perseus.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="http://plato.usite.pro/index.html" target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/perseus-project-api-javascript-integration"
-                                        target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>This web app allows users to request and view Greek texts stored in the Perseus
-                                    database via modern JavaScript implementation (jQuery and AJAX). The XML in the CTS
-                                    API's response is first converted to JSON, then parsed for Greek text, and finally
-                                    stored and displayed in a new, clean JSON object. Mobile compatible.</p>
-                            </div>
-                        </div>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
                     </div>
-                </li>
+                </div>
 
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Pokemon Booster Pack
-                        Simulator</div>
-                    <div class="collapsible-body">
+                <div id="modal-pokemon" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>POKEMON BOOSTER PACK SIMULATOR</h4>
+                        <hr>
                         <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/pokemon.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://pokemonboosterpack.neocities.org" target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/pokemon-booster-pack-simulator"
-                                        target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>Made with vanilla JavaScript, HTML, and CSS, this web application accurately captures
-                                    the probability, rarity distribution, and experience of the first dozen+ sets. My
-                                    first learning project, and one of the <a
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> Vanilla JS, HTML, CSS</p>
+                                <p><b>DESCRIPTION:</b> This web app accurately captures
+                                    the
+                                    probability, rarity distribution, and experience of the first dozen+ sets. My
+                                    first
+                                    major learning project, and one of the <a
                                         href="https://neocities.org/browse?sort_by=hits&tag=pokemon"
                                         target="_blank">most popular</a> Pokemon fan sites on Neocities. Mobile
-                                    friendly.</p>
+                                    friendly. See also my <a
+                                        href="https://jwkeena.github.io/magi-nation-booster-pack-simulator/"
+                                        target="_blank">Magi Nation Booster Pack Simulator</a>.
+                                </p>
+                            </div>
+                            <div class="col m12 l6">
+                                <a href="https://pokemonboosterpack.neocities.org" target="_blank"><img
+                                        class="responsive-img" src="images/pokemon-demo.gif"></a>
                             </div>
                         </div>
                     </div>
-                </li>
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Super Coin Collector
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
                     </div>
-                    <div class="collapsible-body">
+                </div>
+
+                <div id="modal-perseus" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>PERSEUS PROJECT XML TO JSON CONVERTER</h4>
+                        <hr>
                         <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/mario.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://jwkeena.github.io/super-coin-collector/" target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/super-coin-collector" target="_blank">Code</a>
-                                </div>
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> XML, jQuery, AJAX, HTML, CSS</p>
+                                <p><b>DESCRIPTION:</b> Currently, the Perseus Project API only returns XML and only on
+                                    non-secure servers,
+                                    whereas modern web standards call for JSON on secure servers. This web app
+                                    solves the problem by allowing users to request and view Greek texts stored in
+                                    the
+                                    Perseus database via modern JavaScript implementation.
+                                </p>
                             </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>Made with jQuery, jQuery UI, HTML, and CSS, this Nintendo-inspired randomized
-                                    arithmetic game uses basic animation effects and collision detection. Designed for
-                                    desktop.</p>
+                            <div class="col m12 l6">
+                                <a href="http://plato.usite.pro/index.html" target="_blank"><img class="responsive-img"
+                                        src="images/perseus-demo.gif"></a>
                             </div>
                         </div>
                     </div>
-                </li>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
+                    </div>
+                </div>
 
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>The Office Character
-                        Guessing Game</div>
-                    <div class="collapsible-body">
+                <div id="modal-sequelize" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>SEQUELIZE ME CAPTAIN!</h4>
+                        <hr>
                         <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/office.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://jwkeena.github.io/the-office-character-guessing-game/"
-                                        target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/the-office-character-guessing-game"
-                                        target="_blank">Code</a>
-                                </div>
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> Sequelize, MySQL, Node, Express, Handlebars</p>
+                                <p><b>DESCRIPTION:</b> A simple CRUD cereal tracker
+                                    using
+                                    the
+                                    MVC
+                                    design pattern. Custom server, database, and api routing. Add your favorite
+                                    cereal
+                                    to the collection! Mobile friendly.
+                                </p>
                             </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>Made with vanilla JS, HTML, and CSS, this hangman-style game is coded as a single
-                                    object.</p>
+                            <div class="col m12 l6">
+                                <a href="https://calm-reef-35185.herokuapp.com/" target="_blank"><img
+                                        class="responsive-img" src="images/sequelize-demo.gif"></a>
                             </div>
                         </div>
                     </div>
-                </li>
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Ultimate Date Night
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
                     </div>
-                    <div class="collapsible-body">
+                </div>
+
+                <div id="modal-office" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>THE OFFICE CHARACTER GUESSING GAME</h4>
+                        <hr>
                         <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/datenight.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://amandanewton.github.io/ProjectOne/" target="_blank">Demo</a> |
-                                    <a href="https://github.com/amandanewton/ProjectOne" target="_blank">Code</a>
-                                </div>
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> Sequelize, MySQL, Node, Express, Handlebars</p>
+                                <p><b>DESCRIPTION:</b> This hangman-style game is coded as a single
+                                    object. Players are shwon a GIF of the corresponding character on the TV
+                                    display after each round.
+                                </p>
                             </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>Using the Yelp, OMDB, and TMDB APIs, this team-based project provides restaurant and
-                                    movie suggestions based on the user's location and preferences. In this team-based
-                                    project, I was responsible for the movie search, OMDB and TMDB API calls, Firebase
-                                    integration, and dynamic accordion display. Mobile friendly.</p>
+                            <div class="col m12 l6">
+                                <a href="https://jwkeena.github.io/the-office-character-guessing-game/"
+                                    target="_blank"><img class="responsive-img" src="images/office-demo.gif"></a>
                             </div>
                         </div>
                     </div>
-                </li>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
+                    </div>
+                </div>
 
-            </ul>
+                <div id="modal-date-night" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>ULTIMATE DATE NIGHT</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> jQuery, jQuery UI, Firebase</p>
+                                <p><b>DESCRIPTION:</b> A stress-free app to solve the perpetual couples' problem (what
+                                    to eat & what to watch) at the same time, providing restaurant and movie suggestions
+                                    based on the user's location and preferences.
+                                    In
+                                    this team project, I was responsible for the movie search, OMDB and TMDB
+                                    API
+                                    calls, Firebase integration, and dynamic accordion display. Mobile responsive.
+                                </p>
+                            </div>
+                            <div class="col m12 l6">
+                                <a href="https://github.com/amandanewton/ProjectOne/" target="_blank"><img
+                                        class="responsive-img" src="images/date-night-demo.gif"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
+                    </div>
+                </div>
+
+                <div id="modal-node-storefront" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>NODE STOREFRONT</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> Node, MySQL (npm), Inquirer</p>
+                                <p><b>DESCRIPTION:</b> A command
+                                    line
+                                    Node app that simulates a storefront, using the MySQL and Inquirer packages.
+                                    Features customer and manager views, allowing purchasing, inventory restocking,
+                                    and
+                                    adding new products.
+                                </p>
+                            </div>
+                            <div class="col m12 l6">
+                                <a href="https://drive.google.com/file/d/1KzOt9NHjUq0uLC11X_cb-G76anPPUJuz/view"
+                                    target="_blank"><img class="responsive-img" src="images/bamazon.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
+                    </div>
+                </div>
+
+                <div id="modal-node-liri" class="modal modal-fixed-footer center">
+                    <div class="modal-content grey darken-2 amber-text text-lighten-5">
+                        <h4>NODE MOVIE, SONG, & CONCERT SEARCH</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col sm12 l6 left-align">
+                                <p><b>TECH:</b> Node, Spotify API</p>
+                                <p><b>DESCRIPTION:</b> A command line Node app that allows the user to search for info
+                                    on movies, songs,
+                                    and upcoming concerts. Searches are saved in a .txt file and can be recalled. Demo
+                                    video
+                                    link provided; to run it yourself, download the GitHub repo and run npm install
+                                    in
+                                    the terminal.
+                                </p>
+                            </div>
+                            <div class="col m12 l6">
+                                <a href="https://drive.google.com/file/d/1SV45M03akrh0nR7AlrjP2PxALx-rMbqO/view"
+                                    target="_blank"><img class="responsive-img" src="images/liri.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer amber lighten-5 grey-text">
+                        <a href="#!" class="modal-close waves-effect btn-flat">CLOSE</a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 
-        <!-- New row -->
-        <div class="row">
+    </main>
 
-            <h4 class="centered">Back End</h4>
-
-            <ul class="collapsible" style="color: teal; opacity: 1 !important;">
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Bamazon Storefront
-                    </div>
-                    <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/bamazon.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://drive.google.com/file/d/1KzOt9NHjUq0uLC11X_cb-G76anPPUJuz/view"
-                                        target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/bamazon" target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>The internet's best worst Amazon ripoff! A command line Node app that simulates a
-                                    storefront, using the MySQL and Inquirer packages. Features customer and manager
-                                    views, allowing purchasing, inventory restocking, and adding new products. Demo
-                                    video link provided; to run it yourself, download the GitHub repo, run npm install
-                                    in the terminal, and create the local database using the seeds.sql file. Don't
-                                    forget to update the database connection in bamazon.js.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li onclick="invisibleScroll();">
-                    <div class="collapsible-header"><i class="material-icons">play_circle_filled</i>Movie, Song, &
-                        Concert Search</div>
-                    <div class="collapsible-body">
-                        <div class="row">
-                            <div class="col s12 m8 l8">
-                                <div class="parallax-container">
-                                    <div class="parallax"><img src="images/liri.png"></div>
-                                </div>
-                                <div class="center">
-                                    <br>
-                                    <a href="https://drive.google.com/file/d/1SV45M03akrh0nR7AlrjP2PxALx-rMbqO/view"
-                                        target="_blank">Demo</a> |
-                                    <a href="https://github.com/jwkeena/liri-node-app" target="_blank">Code</a>
-                                </div>
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <p><b>Project Details</b></p>
-                                <p>A command line Node app that allows the user to search for info on movies, songs, and
-                                    upcoming concerts, using the Inquirer, Axios, and Moment packages. Searches are
-                                    saved in a .txt file and can be recalled. Demo video link provided; to run it
-                                    yourself, download the GitHub repo and run npm install in the terminal.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-    <div class="row center">
-        <div style="margin: 0px; padding: 0px 0px 10px 0px; color: teal">
-            Want to get in touch? <a onclick="email()" href="#"><b>Email me!</b></a>
-        </div>
-    </div>
-
-    </div>
-    <footer class="page-footer teal">
-
-        <div class="container">
-            <div class="row center" style="padding: 0px 0px 15px 0px">
-                <a href="https://github.com/jwkeena?tab=repositories" title="Github Profile" target="_blank"><img
-                        class="logo1" src="images/github.png"></a>
-                <a href="https://www.linkedin.com/in/justin-keena" title="LinkedIn Profile" target="_blank"><img
-                        class="logo2"
-                        src="http://www.logospng.com/images/216/welcome-pd-webpage-home-for-piotrs-interactive-cv-216606.png"></a>
-                &nbsp;
-                <a href="https://nashuacc.academia.edu/JustinKeena" title="Academia.edu Profile" target="_blank"><img
-                        class="logo3" src="https://a.academia-assets.com/images/academia-logo-redesign-2015-A.svg"></a>
-                &nbsp;
-                <a onclick="M.toast({html: 'Really? Who has MySpace anymore?', displayLength: 2000})" class="button"
-                    title="MySpace Profile"><img class="logo3"
-                        src="https://www.pngrepo.com/download/68248/myspace-big-logo.png"></a>
+    <footer>
+        <div id="end" class="center-align grey darken-1 section scrollspy">
+            <div class="section-header">
+                <span class="center-align amber-text text-lighten-5">connection . E N D ( );</span>
             </div>
         </div>
-
     </footer>
-
 
     <!-- jQuery link -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -592,65 +660,8 @@
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
 
-    <script>
-        function email() {
-            window.location.href = "mailto:jwkeena@gmail.com";
-        };
-
-        function invisibleScroll() {
-            setTimeout(function () {
-                window.scrollBy(0, 5)
-            }, 250)
-        };
-
-        // Opens modal
-        $(document).ready(function () {
-            $('.modal-trigger').leanModal();
-        });
-
-        // Thanks to https://codepen.io/galulex/pen/eNZRVq
-        function zoom(e) {
-            let zoomer = e.currentTarget;
-            e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-            e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-            x = offsetX / zoomer.offsetWidth * 100
-            y = offsetY / zoomer.offsetHeight * 100
-            zoomer.style.backgroundPosition = x + '% ' + y + '%';
-        };
-
-        // If the screen is too small for the zoom function to look good on the resume, open it on a separate page and close the modal invisibly
-        let isModalOpen = false
-        $("#resume-button").on("click", function () {
-
-            if (isModalOpen === false) {
-                isModalOpen = true
-            }
-
-            if (document.documentElement.clientWidth <= 800) {
-                window.open("/Resume.pdf");
-
-                // Somehow making this an instant delay causes it to work. If it's not wrapped in a setTimeout, the modal won't close
-                setTimeout(function () {
-                    document.getElementById("modal-close").click();
-                    isModalOpen = false;
-                }, 0);
-            }
-        });
-
-        $(document.body).on("click", function (e) {
-
-            // If anything BUT the resume button is clicked (necessary so it doesn't interfere with previous event listener)
-            if (!$(e.target).is("#resume-button")) {
-
-                // Then close the modal
-                if (isModalOpen === true) {
-                    document.getElementById("modal-close").click();
-                    isModalOpen = false;
-                }
-            };
-
-        });
-    </script>
+    <!-- Custom JS link -->
+    <script src="js/index.js"></script>
 
 </body>
 

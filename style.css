@@ -1,3 +1,71 @@
+html {
+  background-color: #fff8e1
+}
+
+.dot {
+  height: 170px;
+  width: 170px;
+  background-color: #ffd54f;
+  border-radius: 50%;
+  position: fixed;
+  right: -50px;
+  mix-blend-mode: normal;
+}
+
+.vertical-container { 
+  position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+body,
+a {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fixed-sidenav-left {
+  position: fixed;
+  left: 9px;
+  bottom: 50%;
+  z-index: 11;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.fixed-sidenav-right {
+  position: fixed;
+  right: 9px;
+  bottom: 50%;
+  z-index: 11;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.tech-logo {
+  height: 40px;
+}
+
+.section-header {
+  padding: 10px 0px 10px 0px;
+  font-size: 2.1rem;
+}
+
+.btn-large {
+  background-color: goldenrod;
+  margin-right: 1px;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
 figure.zoom {
   background-position: 50% 50%;
   background-size: 1200px;
@@ -15,11 +83,10 @@ figure.zoom img {
   transition: opacity .5s;
   display: block;
   width: 100%;
-
 }
 
 #resume-modal {
-  background-image: linear-gradient(rgb(176,121,64), teal);
+  background-image: linear-gradient(#fff8e1, goldenrod);
   padding: 0px;
 }
 
@@ -41,12 +108,9 @@ figure.zoom img {
   bottom: 6px;
 }
 
-.modal-header a, .modal-bottom a {
+.modal-header a,
+.modal-bottom a {
   color: white;
-}
-
-.centered {
-  text-align: center;
 }
 
 .collapsible-body {
@@ -54,92 +118,67 @@ figure.zoom img {
 }
 
 .btn-large:hover {
-  color: rgb(121,85,72);
+  background-color: lightslategrey;
 }
 
-.logo1 {
-  width: 55px;
-  height: 55px;
-  display: inline;
-}
-
-.logo2, .logo3 {
-  width: 35px;
-  height: 35px;
-  display: inline;
+.contact-logo {
+  height: 40px;
   position: relative;
-  top: -10px;
+  top: 25px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
-.tech {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-}
-
-.greek, .latin {
-  display: inline-block;
-  margin: 0 auto;
-  width: 50px;
-}
-
-nav ul a,
-nav .brand-logo, .brown-text a, nav li {
-  color: rgb(254,189,131);
-}
-
-.project-title-dark {
-  color: teal;
-  font-weight: bold;
-}
-
-.project-title-light {
-  color: white;
-  font-weight: bold;
+.contact-logo-mobile {
+  height: 40px;
+  margin-left: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
 }
 
 p {
   line-height: 2rem;
+  margin: 0;
 }
 
-.sidenav-trigger {
-  color: #26a69a;
+.project-title {
+ font-weight: bold;
+ color: goldenrod;
+ 
+}
+
+.portfolio a:link {
+  font-family: monospace;
+  font-size: 15px;
+}
+
+/* https://stackoverflow.com/questions/4000792/how-can-i-style-code-listings-using-css */
+#portfolio-text {
+  margin: 10px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid goldenrod;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 350px;
   line-height: 0;
   height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
+  color: rgba(255, 255, 255, .9);
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
+.parallax-container .section {
+  width: 100%;
 }
