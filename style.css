@@ -32,24 +32,6 @@ a {
   box-sizing: border-box;
 }
 
-.fixed-sidenav-left {
-  position: fixed;
-  left: 9px;
-  bottom: 50%;
-  z-index: 11;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.fixed-sidenav-right {
-  position: fixed;
-  right: 9px;
-  bottom: 50%;
-  z-index: 11;
-  cursor: pointer;
-  font-size: 20px;
-}
-
 .tech-logo {
   height: 40px;
 }
@@ -59,30 +41,11 @@ a {
   font-size: 2.1rem;
 }
 
-.btn-large {
+.btn-large, .btn-large:focus {
   background-color: goldenrod;
   margin-right: 1px;
   margin-left: 5px;
   margin-top: 20px;
-}
-
-figure.zoom {
-  background-position: 50% 50%;
-  background-size: 1200px;
-  position: relative;
-  width: 90%;
-  overflow: hidden;
-  cursor: zoom-in;
-}
-
-figure.zoom img:hover {
-  opacity: 0;
-}
-
-figure.zoom img {
-  transition: opacity .5s;
-  display: block;
-  width: 100%;
 }
 
 #resume-modal {
@@ -151,6 +114,10 @@ p {
 .portfolio a:link {
   font-family: monospace;
   font-size: 15px;
+}
+
+.modal a.modal-close {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* https://stackoverflow.com/questions/4000792/how-can-i-style-code-listings-using-css */
