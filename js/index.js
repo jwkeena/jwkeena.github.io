@@ -23,7 +23,7 @@ function email() {
 };
 
 $("#resume-button").on("click", function () {
-    window.open("/Resume.pdf");
+    window.open("Resume.pdf");
 });
 
 $(document.body).on("dblclick", ".carousel-item", function () {
