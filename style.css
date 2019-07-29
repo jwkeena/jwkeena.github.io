@@ -145,6 +145,12 @@ p {
 .project-title {
  font-weight: bold;
  color: goldenrod;
+ 
+}
+
+.portfolio a:link {
+  font-family: monospace;
+  font-size: 15px;
 }
 
 /* https://stackoverflow.com/questions/4000792/how-can-i-style-code-listings-using-css */
