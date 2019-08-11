@@ -3,7 +3,7 @@
 
 function processImages()  
 {
-  if ( loadingFlags[0])
+  if ( loadingFlags[0] || loadingFlags[1] || loadingFlags[2])
   {
     // check often until loaded
     window.setTimeout(processImages,50);
