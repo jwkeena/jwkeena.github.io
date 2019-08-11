@@ -12,6 +12,10 @@ html {
   mix-blend-mode: normal;
 }
 
+.move-down  {
+  top: 40px !important;
+}
+
 .vertical-container { 
   position: relative;
 }
