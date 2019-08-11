@@ -13,7 +13,7 @@ function processImages()
 }
 
 $(document).ready(function () {
-    processImages();
+    window.setTimeout(processImages,1000);
 })
 
 // Materialize scrollspy http://www.freetimelearning.com/materialize-css/example-codes/scroll-spy.html
