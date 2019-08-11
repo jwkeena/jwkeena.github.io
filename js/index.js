@@ -10,11 +10,16 @@ function processImages()
   }
     $("main").addClass("all-loaded");
     $(".progress").css("display", "none");
-}
+};
 
-$(document).ready(function () {
-    window.setTimeout(processImages,1000);
-})
+if ($.browser.mozilla) {
+    $("main").addClass("all-loaded");
+    $(".progress").css("display", "none");
+} else {
+    $(document).ready(function () {
+        window.setTimeout(processImages,1000);
+    })
+};
 
 // Materialize scrollspy http://www.freetimelearning.com/materialize-css/example-codes/scroll-spy.html
 $(document).ready(function () {
