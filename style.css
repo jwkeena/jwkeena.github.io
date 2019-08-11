@@ -2,6 +2,24 @@ html {
   background-color: #fff8e1
 }
 
+main {
+  opacity: 0;
+}
+
+main.all-loaded {
+  opacity: 1;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  background-color: lightslategray;
+}
+
+.progress .indeterminate {
+  background-color: #ffd54f;
+}
+
 .dot {
   height: 170px;
   width: 170px;

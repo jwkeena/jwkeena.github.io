@@ -1,3 +1,9 @@
+// Hide site until loaded adapted from https://www.amberweinberg.com/using-js-to-hide-site-until-loaded/
+$(window).on("load", function () {
+    $("main").addClass("all-loaded");
+    $(".progress").css("display", "none");
+});
+
 // Materialize scrollspy http://www.freetimelearning.com/materialize-css/example-codes/scroll-spy.html
 $(document).ready(function () {
     $('.scrollspy').scrollSpy({
