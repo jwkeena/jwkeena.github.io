@@ -27,17 +27,24 @@
     <!-- Custom CSS -->
     <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection">
 
+    <script type="text/javascript">
+        var loadingFlags = [1, 1, 1];
+
+        function setLoadingFlags(i) {
+            loadingFlags[i] = 0;
+        }
+    </script>
+
 </head>
 
 <body>
 
     <div class="progress">
-        <p>Loading...</p>
         <div class="indeterminate"></div>
     </div>
 
     <main>
-        
+
         <!-- Side Navigation -->
         <div class="col hide-on-med-and-down m3 l2 vertical-container" style="z-index: 1000;">
             <ul class="section table-of-contents vertical-center"
@@ -62,11 +69,11 @@
             <div class="carousel">
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://backlog.neocities.org/letters/" href="#a">
-                    <img src="images/csl-demo.gif">
+                    <img src="images/csl-demo.gif" onload="setLoadingFlags(0)">
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://jwkeena.github.io/super-coin-collector/" href="#a">
-                    <img src="images/super-coin-collector-demo.gif">
+                    <img src="images/super-coin-collector-demo.gif" onload="setLoadingFlags(1)">
                 </a>
                 <a class="carousel-item move-down" title="double-click to open demo links"
                     data-link="https://jwkeena.github.io/react-memory-game/" href="#a">
@@ -90,7 +97,7 @@
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://secret-taiga-28497.herokuapp.com/" href="#a">
-                    <img src="images/videogame-library-demo.gif">
+                    <img src="images/videogame-library-demo.gif" onload="setLoadingFlags(2)">
                 </a>
             </div>
         </div>

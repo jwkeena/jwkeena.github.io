@@ -1,8 +1,20 @@
-// Hide site until loaded adapted from https://www.amberweinberg.com/using-js-to-hide-site-until-loaded/
-$(window).on("load", function () {
+// Hide site until loaded adapted from 
+// https://www.amberweinberg.com/using-js-to-hide-site-until-loaded/ && https://www.utopiamechanicus.com/article/javascript-wait-for-img-load/
+function processImages()  
+{
+  if ( loadingFlags[0] && loadingFlags[1] && loadingFlags[2])
+  {
+    // check often until loaded
+    window.setTimeout(processImages,50);
+    return;
+  }
     $("main").addClass("all-loaded");
     $(".progress").css("display", "none");
-});
+}
+
+$(document).ready(function () {
+    processImages();
+})
 
 // Materialize scrollspy http://www.freetimelearning.com/materialize-css/example-codes/scroll-spy.html
 $(document).ready(function () {
