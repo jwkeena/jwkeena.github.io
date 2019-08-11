@@ -2,7 +2,7 @@
 // https://www.amberweinberg.com/using-js-to-hide-site-until-loaded/ && https://www.utopiamechanicus.com/article/javascript-wait-for-img-load/
 function processImages()  
 {
-  if ( loadingFlags[0] && loadingFlags[1] && loadingFlags[2])
+  if ( loadingFlags[0] || loadingFlags[1])
   {
     // check often until loaded
     window.setTimeout(processImages,50);
