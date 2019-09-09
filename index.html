@@ -96,8 +96,8 @@
                     <img src="images/date-night-demo.gif">
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
-                    data-link="https://secret-taiga-28497.herokuapp.com/" href="#a">
-                    <img src="images/videogame-library-demo.gif" >
+                    data-link="https://virtualbacklog.herokuapp.com/" href="#a">
+                    <img src="images/virtual-backlog-demo.gif" >
                 </a>
             </div>
         </div>
@@ -256,7 +256,16 @@
 
                 <div class="row" id="portfolio-text">
 
+                    <p>// Click the name of each project to view more info</p>
+
                     <p>my."PORTFOLIO" = { </p>
+
+                    <p class="col offset-s1 s11"><a class="project-title modal-trigger"
+                            href="#modal-videogame-library">"Virtual Backlog"</a>:
+                        {"links": [<a href="https://virtualbacklog.herokuapp.com/" target="_blank">"demo"</a>,
+                        <a href="https://github.com/jwkeena/virtual-backlog" target="_blank">"code"</a>], "fullStack":
+                        true},
+                    </p>
 
                     <p class="col offset-s1 s11"><a class="project-title monospace modal-trigger"
                             href="#modal-csl">"C.S.
@@ -272,12 +281,6 @@
                     </p>
 
 
-                    <p class="col offset-s1 s11"><a class="project-title modal-trigger"
-                            href="#modal-videogame-library">"Videogame Library"</a>:
-                        {"links": [<a href="https://secret-taiga-28497.herokuapp.com/" target="_blank">"demo"</a>,
-                        <a href="https://github.com/jwkeena/virtual-backlog" target="_blank">"code"</a>], "fullStack":
-                        true},
-                    </p>
 
                     <p class="col offset-s1 s11"><a class="project-title modal-trigger"
                             href="#modal-image-labeler">"2-Player Image Labeler"</a>:
@@ -443,26 +446,17 @@
 
                 <div id="modal-videogame-library" class="modal modal-fixed-footer center">
                     <div class="modal-content grey darken-2 amber-text text-lighten-5">
-                        <h4>VIDEOGAME LIBRARY</h4>
+                        <h4>VIRTUAL BACKLOG</h4>
                         <hr>
                         <div class="row">
                             <div class="col sm12 l6 left-align">
-                                <p><b>TECH:</b> Express,
-                                    Node, Sequelize, Bootstrap, jQuery, AJAX </p>
-                                <p><b>DESCRIPTION:</b> Game collectors want to see and show off their physical library
-                                    on a shelf, but the same isn't possible for digital collections. To solve the
-                                    problem, our team created a full-stack app to store and display a 3D videogame
-                                    collection of any kind. Games can be added by title search or by barcode. I was
-                                    responsible for programming the
-                                    server, database, and database models; designing and integrating the submission
-                                    modals; cleaning up the overall layout with Bootstrap; Giant Bomb API routing; and
-                                    the barcode
-                                    scanner.
+                                <p><b>TECH:</b> React, JavaScript, HTML5, CSS3, Bootstrap, MongoDB, Mongoose, Express </p>
+                                <p><b>DESCRIPTION:</b> Game collectors love to display, show off, and track their physical library on a shelf, but the same isn’t possible for digital collections. To solve the problem, <a href="https://captainefff.github.io/" target="_blank" style="font-family: 'Montserrat', sans-serif">David Banville</a> and I created a full-stack MERN app to store and display a videogame collection (digital, physical, or both) in 3D. Any game can be added to the user’s library by title search or by barcode scanning; games can be edited and sorted on the fly to the user’s liking (by system, title, favorite, etc); and custom links are provided for collectors to show off their library to anyone, whether they have an account or not. Our prototype can be found <a href="https://secret-taiga-28497.herokuapp.com/" target="_blank" style="font-family: 'Montserrat', sans-serif">here</a>.
                                 </p>
                             </div>
                             <div class="col m12 l6">
-                                <a href="https://secret-taiga-28497.herokuapp.com/" target="_blank"><img
-                                        class="responsive-img" src="images/videogame-library-demo.gif"></a>
+                                <a href="https://virtualbacklog.herokuapp.com/" target="_blank"><img
+                                        class="responsive-img" src="images/virtual-backlog-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -817,7 +811,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://scratch.mit.edu/projects/273442727/" target="_blank"><img
-                                        class="responsive-img" src="images/bug-invaders-demo.gif"></a>
+                                        class="responsive-img" src="images/bug-invaders.png"></a>
                             </div>
                         </div>
                     </div>
