@@ -9,6 +9,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
 
+    <!-- Progress bar must be loaded first -->
+    <script data-pace-options="{'ajax': false, 'eventLag': false, 'elements': false}" src="./js/pace.min.js"></script>
+    <link href="./assets/css/progressbar.css" rel="stylesheet">
+    <style>
+        body {
+            opacity: 0;
+        }
+        
+        body.all-loaded {
+            opacity: 1;
+            transition: ease-in 1s;
+        }
+    </style>
+    <script type="text/javascript">
+        function revealPage () {
+            const body = document.getElementsByTagName("body")[0];
+            body.classList.add("all-loaded");
+            Pace.stop;
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -19,29 +46,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Materialize -->
-    <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="./assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
 
     <!-- Import font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection">
-
-    <script type="text/javascript">
-        var loadingFlags = [1, 1, 1];
-
-        function setLoadingFlags(i) {
-            loadingFlags[i] = 0;
-        }
-    </script>
+    <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
 
 </head>
 
-<body>
-
-    <div class="progress">
-        <div class="indeterminate"></div>
-    </div>
+<body onload="revealPage()">
 
     <main>
 
@@ -69,35 +84,35 @@
             <div class="carousel">
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://jwkeena.github.io/csl-letters/" href="#a">
-                    <img src="images/csl-demo.gif" onload="setLoadingFlags(0)">
+                    <img src="assets/images/csl-demo.gif">
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://jwkeena.github.io/super-coin-collector/" href="#a">
-                    <img src="images/super-coin-collector-demo.gif" onload="setLoadingFlags(1)">
+                    <img src="assets/images/super-coin-collector-demo.gif">
                 </a>
                 <a class="carousel-item move-down" title="double-click to open demo links"
                     data-link="https://jwkeena.github.io/react-memory-game/" href="#a">
-                    <img src="images/react-memory-game-demo.gif">
+                    <img src="assets/images/react-memory-game-demo.gif">
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://pokemonboosterpack.neocities.org" href="#a">
-                    <img src="images/pokemon-demo.gif">
+                    <img src="assets/images/pokemon-demo.gif">
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://jwkeena.github.io/the-office-character-guessing-game/" href="#a">
-                    <img src="images/office-demo.gif">
+                    <img src="assets/images/office-demo.gif">
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://jwkeena.github.io/perseus-project-api-javascript-integration/" href="#a">
-                    <img src="images/perseus-demo.gif">
+                    <img src="assets/images/perseus-demo.gif">
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://amandanewton.github.io/ProjectOne/" href="#a">
-                    <img src="images/date-night-demo.gif">
+                    <img src="assets/images/date-night-demo.gif">
                 </a>
                 <a class="carousel-item" title="double-click to open demo links"
                     data-link="https://virtualbacklog.herokuapp.com/" href="#a">
-                    <img src="images/virtual-backlog-demo.gif" >
+                    <img src="assets/images/virtual-backlog-demo.gif" >
                 </a>
             </div>
         </div>
@@ -114,7 +129,7 @@
             <div class="parallax-container valign-wrapper">
                 <div class="section no-pad-bot">
                 </div>
-                <div class="parallax"><img src="images/keble.jpg" alt="Keble Dining Hall"></div>
+                <div class="parallax"><img src="assets/images/keble.jpg" alt="Keble Dining Hall"></div>
             </div>
 
             <div class="container">
@@ -124,11 +139,11 @@
 
                     <div class="col s12">
                         <img onclick="email()" class="contact-logo hide-on-small-and-down" title="Email me!"
-                            src="images/logo-email.png">
+                            src="assets/images/logo-email.png">
 
                         <a href="https://github.com/jwkeena?tab=repositories" title="Github Profile"
                             target="_blank"><img class="contact-logo hide-on-small-and-down"
-                                src="images/logo-github.png"></a>
+                                src="assets/images/logo-github.png"></a>
 
                         <a href="#!" id="resume-button" class="btn-large btn">Resume</a>
 
@@ -136,11 +151,11 @@
                             class="btn-large waves-effect btn">CV</a>
 
                         <a href="https://www.linkedin.com/in/justin-keena" title="LinkedIn Profile" target="_blank"><img
-                                class="contact-logo hide-on-small-and-down" src="images/logo-linkedin.png"></a>
+                                class="contact-logo hide-on-small-and-down" src="assets/images/logo-linkedin.png"></a>
 
                         <a href="https://nashuacc.academia.edu/JustinKeena" title="Academia.edu Profile"
                             target="_blank"><img class="contact-logo hide-on-small-and-down"
-                                src="images/logo-academia.png"></a>
+                                src="assets/images/logo-academia.png"></a>
                     </div>
 
                 </div>
@@ -149,16 +164,16 @@
 
                     <div class="col s12">
                         <img onclick="email()" style="cursor: pointer;" class="contact-logo-mobile" title="Email me!"
-                            src="images/logo-email.png">
+                            src="assets/images/logo-email.png">
 
                         <a href="https://github.com/jwkeena?tab=repositories" title="Github Profile"
-                            target="_blank"><img src="images/logo-github.png" class="contact-logo-mobile"></a>
+                            target="_blank"><img src="assets/images/logo-github.png" class="contact-logo-mobile"></a>
 
                         <a href="https://www.linkedin.com/in/justin-keena" title="LinkedIn Profile" target="_blank"><img
-                                src="images/logo-linkedin.png" class="contact-logo-mobile"></a>
+                                src="assets/images/logo-linkedin.png" class="contact-logo-mobile"></a>
 
                         <a href="https://nashuacc.academia.edu/JustinKeena" title="Academia.edu Profile"
-                            target="_blank"><img src="images/logo-academia.png" class="contact-logo-mobile"></a>
+                            target="_blank"><img src="assets/images/logo-academia.png" class="contact-logo-mobile"></a>
                     </div>
 
                 </div>
@@ -186,22 +201,22 @@
 
                 <div class="row valign-wrapper center">
                     <div class="col s12">
-                        <img class="tech-logo" src="images/logo-html.png" title="HTML">
-                        <img class="tech-logo" src="images/logo-git.png" title="Git">
-                        <img class="tech-logo" src="images/logo-materialize.png" title="Materialize">
-                        <img class="tech-logo" src="images/logo-firebase.png" title="Firebase">
-                        <img class="tech-logo" src="images/logo-js.png" title="JavaScript">
-                        <img class="tech-logo" src="images/logo-mongodb.png" title="MongoDB">
-                        <img class="tech-logo" src="images/logo-node.png" title="Node">
-                        <img class="tech-logo" src="images/logo-css.png" title="CSS">
-                        <img class="tech-logo" src="images/logo-sequelize.png" title="Sequelize">
-                        <img class="tech-logo" src="images/logo-backbone.png" title="Backbone">
-                        <img class="tech-logo" src="images/logo-jquery.png" title="jQuery">
-                        <img class="tech-logo" src="images/logo-react.png" title="React">
-                        <img class="tech-logo" src="images/logo-csharp.png" title="C#">
-                        <img class="tech-logo" src="images/logo-dotnet.png" title=".NET">
-                        <img class="tech-logo" src="images/logo-bootstrap.png" title="Bootstrap">
-                        <img class="tech-logo" src="images/logo-mysql.png" title="MySQL">
+                        <img class="tech-logo" src="assets/images/logo-html.png" title="HTML">
+                        <img class="tech-logo" src="assets/images/logo-git.png" title="Git">
+                        <img class="tech-logo" src="assets/images/logo-materialize.png" title="Materialize">
+                        <img class="tech-logo" src="assets/images/logo-firebase.png" title="Firebase">
+                        <img class="tech-logo" src="assets/images/logo-js.png" title="JavaScript">
+                        <img class="tech-logo" src="assets/images/logo-mongodb.png" title="MongoDB">
+                        <img class="tech-logo" src="assets/images/logo-node.png" title="Node">
+                        <img class="tech-logo" src="assets/images/logo-css.png" title="CSS">
+                        <img class="tech-logo" src="assets/images/logo-sequelize.png" title="Sequelize">
+                        <img class="tech-logo" src="assets/images/logo-backbone.png" title="Backbone">
+                        <img class="tech-logo" src="assets/images/logo-jquery.png" title="jQuery">
+                        <img class="tech-logo" src="assets/images/logo-react.png" title="React">
+                        <img class="tech-logo" src="assets/images/logo-csharp.png" title="C#">
+                        <img class="tech-logo" src="assets/images/logo-dotnet.png" title=".NET">
+                        <img class="tech-logo" src="assets/images/logo-bootstrap.png" title="Bootstrap">
+                        <img class="tech-logo" src="assets/images/logo-mysql.png" title="MySQL">
                         <svg viewbox="0 0 128 128" class="tech-logo" title="Express">
                             <path
                                 d="M126.67,98.44c-4.56,1.16-7.38.05-9.91-3.75-5.68-8.51-11.95-16.63-18-24.9-.78-1.07-1.59-2.12-2.6-3.45C89,76,81.85,85.2,75.14,94.77c-2.4,3.42-4.92,4.91-9.4,3.7L92.66,62.34,67.6,29.71c4.31-.84,7.29-.41,9.93,3.45,5.83,8.52,12.26,16.63,18.67,25.21C102.65,49.82,109,41.7,115,33.26c2.41-3.42,5-4.72,9.33-3.46-3.28,4.35-6.49,8.63-9.72,12.88-4.36,5.73-8.64,11.53-13.16,17.14-1.61,2-1.35,3.3.09,5.19C109.9,76,118.16,87.1,126.67,98.44Z">
@@ -210,11 +225,11 @@
                                 d="M1.33,61.74c.72-3.61,1.2-7.29,2.2-10.83,6-21.43,30.6-30.34,47.5-17.06C60.93,41.64,63.39,52.62,62.9,65H7.1c-.84,22.21,15.15,35.62,35.53,28.78,7.15-2.4,11.36-8,13.47-15,1.07-3.51,2.84-4.06,6.14-3.06-1.69,8.76-5.52,16.08-13.52,20.66-12,6.86-29.13,4.64-38.14-4.89C5.26,85.89,3,78.92,2,71.39c-.15-1.2-.46-2.38-.7-3.57Q1.33,64.78,1.33,61.74ZM7.2,60.25H57.63c-.33-16.06-10.33-27.47-24-27.57C18.63,32.56,7.85,43.7,7.2,60.25Z">
                             </path>
                         </svg>
-                        <img class="tech-logo" src="images/logo-xml.png" title="XML">
+                        <img class="tech-logo" src="assets/images/logo-xml.png" title="XML">
                         <a href="http://archives.nd.edu/latgramm.htm" target="_blank"><img class="tech-logo"
-                                src="images/logo-latin.png" title="Latin"></a>
+                                src="assets/images/logo-latin.png" title="Latin"></a>
                         <a href="http://www.perseus.tufts.edu/hopper/resolveform?redirect=true" target="_blank"><img
-                                class="tech-logo" src="images/logo-greek.png" title="Greek"></a>
+                                class="tech-logo" src="assets/images/logo-greek.png" title="Greek"></a>
                     </div>
                 </div>
             </div>
@@ -230,7 +245,7 @@
                 </div>
             </div>
             <div class="parallax-container valign-wrapper">
-                <div class="parallax"><img src="images/seahurst.jpg" alt="Seahurst park, Burien, WA"></div>
+                <div class="parallax"><img src="assets/images/seahurst.jpg" alt="Seahurst park, Burien, WA"></div>
             </div>
             
             <div class="container portfolio">
@@ -407,7 +422,7 @@
                         </div>
                         <div class="col m12 l6">
                             <a href="https://jwkeena.github.io/multiplayer-image-labeler-game/" target="_blank"><img
-                                    class="responsive-img" src="images/image-labeler-demo.gif"></a>
+                                    class="responsive-img" src="assets/images/image-labeler-demo.gif"></a>
                         </div>
                     </div>
                 </div>
@@ -432,7 +447,7 @@
                         </div>
                         <div class="col m12 l6">
                             <a href="https://jwkeena.github.io/ancient-greek-declensions-quiz/" target="_blank"><img
-                                    class="responsive-img" src="images/greek-declensions.png"></a>
+                                    class="responsive-img" src="assets/images/greek-declensions.png"></a>
                         </div>
                     </div>
                 </div>
@@ -457,7 +472,7 @@
                         </div>
                         <div class="col m12 l6">
                             <a href="https://scratch.mit.edu/projects/273442727/" target="_blank"><img
-                                    class="responsive-img" src="images/bug-invaders.png"></a>
+                                    class="responsive-img" src="assets/images/bug-invaders.png"></a>
                         </div>
                     </div>
                 </div>
@@ -488,7 +503,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://jwkeena.github.io/csl-letters/" target="_blank"><img
-                                        class="responsive-img" src="images/csl-demo.gif"></a>
+                                        class="responsive-img" src="assets/images/csl-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -509,7 +524,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://jwkeena.github.io/csl-opera-obscura/" target="_blank"><img
-                                        class="responsive-img" src="images/csl-opera-obscura.png"></a>
+                                        class="responsive-img" src="assets/images/csl-opera-obscura.png"></a>
                             </div>
                         </div>
                     </div>
@@ -530,7 +545,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://jwkeena.github.io/magi-nation-booster-pack-simulator/" target="_blank"><img
-                                        class="responsive-img" src="images/magi-nation.png"></a>
+                                        class="responsive-img" src="assets/images/magi-nation.png"></a>
                             </div>
                         </div>
                     </div>
@@ -558,7 +573,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://drive.google.com/file/d/1SV45M03akrh0nR7AlrjP2PxALx-rMbqO/view"
-                                    target="_blank"><img class="responsive-img" src="images/liri.png"></a>
+                                    target="_blank"><img class="responsive-img" src="assets/images/liri.png"></a>
                             </div>
                         </div>
                     </div>
@@ -585,7 +600,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://drive.google.com/file/d/1KzOt9NHjUq0uLC11X_cb-G76anPPUJuz/view"
-                                    target="_blank"><img class="responsive-img" src="images/bamazon.png"></a>
+                                    target="_blank"><img class="responsive-img" src="assets/images/bamazon.png"></a>
                             </div>
                         </div>
                     </div>
@@ -614,7 +629,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://jwkeena.github.io/perseus-project-api-javascript-integration/" target="_blank"><img class="responsive-img"
-                                        src="images/perseus-demo.gif"></a>
+                                        src="assets/images/perseus-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -635,7 +650,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://www.npmjs.com/package/plato-texts" target="_blank"><img
-                                        class="responsive-img" src="images/plato-texts.png"></a>
+                                        class="responsive-img" src="assets/images/plato-texts.png"></a>
                             </div>
                         </div>
                     </div>
@@ -665,7 +680,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://pokemonboosterpack.neocities.org" target="_blank"><img
-                                        class="responsive-img" src="images/pokemon-demo.gif"></a>
+                                        class="responsive-img" src="assets/images/pokemon-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -690,7 +705,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://jwkeena.github.io/react-memory-game/" target="_blank"><img
-                                        class="responsive-img" src="images/react-memory-game-demo.gif"></a>
+                                        class="responsive-img" src="assets/images/react-memory-game-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -717,7 +732,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://calm-reef-35185.herokuapp.com/" target="_blank"><img
-                                        class="responsive-img" src="images/sequelize-demo.gif"></a>
+                                        class="responsive-img" src="assets/images/sequelize-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -743,7 +758,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://jwkeena.github.io/super-coin-collector/" target="_blank"><img
-                                        class="responsive-img" src="images/super-coin-collector-demo.gif"></a>
+                                        class="responsive-img" src="assets/images/super-coin-collector-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -767,7 +782,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://sheltered-scrubland-25190.herokuapp.com/" target="_blank"><img
-                                        class="responsive-img" src="images/superhero-dating.png"></a>
+                                        class="responsive-img" src="assets/images/superhero-dating.png"></a>
                             </div>
                         </div>
                     </div>
@@ -794,7 +809,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://jwkeena.github.io/the-office-character-guessing-game/"
-                                    target="_blank"><img class="responsive-img" src="images/office-demo.gif"></a>
+                                    target="_blank"><img class="responsive-img" src="assets/images/office-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -817,7 +832,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://hidden-headland-92425.herokuapp.com/" target="_blank"><img
-                                        class="responsive-img" src="images/peeler.png"></a>
+                                        class="responsive-img" src="assets/images/peeler.png"></a>
                             </div>
                         </div>
                     </div>
@@ -844,7 +859,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://github.com/amandanewton/ProjectOne/" target="_blank"><img
-                                        class="responsive-img" src="images/date-night-demo.gif"></a>
+                                        class="responsive-img" src="assets/images/date-night-demo.gif"></a>
                             </div>
                         </div>
                     </div>
@@ -865,7 +880,7 @@
                             </div>
                             <div class="col m12 l6">
                                 <a href="https://virtualbacklog.herokuapp.com/" target="_blank"><img
-                                        class="responsive-img" src="images/virtual-backlog-demo.gif"></a>
+                                        class="responsive-img" src="assets/images/virtual-backlog-demo.gif"></a>
                             </div>
                         </div>
                     </div>
