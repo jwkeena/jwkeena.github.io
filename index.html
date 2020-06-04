@@ -12,23 +12,6 @@
     <!-- Progress bar must be loaded first -->
     <script data-pace-options='{"ajax": false, "eventLag": false, "elements": false}' src="./js/pace.min.js"></script>
     <link href="./assets/css/progressbar.css" rel="stylesheet">
-    <style>
-        body {
-            opacity: 0;
-        }
-        
-        body.all-loaded {
-            opacity: 1;
-            transition: ease-in 1s;
-        }
-    </style>
-    <script type="text/javascript">
-        function revealPage () {
-            const body = document.getElementsByTagName("body")[0];
-            body.classList.add("all-loaded");
-            Pace.stop;
-        }
-    </script>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -56,9 +39,27 @@
 
 </head>
 
-<body onload="revealPage()">
+<style>
+    main {
+        opacity: 0;
+    }
+    
+    main.all-loaded {
+        opacity: 1;
+        transition: ease-in 1s;
+    }
+</style>
+<script type="text/javascript">
+    function revealPage () {
+        const main = document.getElementsByTagName("main")[0];
+        main.classList.add("all-loaded");
+        Pace.stop;
+    }
+</script>
 
-    <main>
+<body>
+
+    <main onload="revealPage()">
 
         <!-- Side Navigation -->
         <div class="col hide-on-med-and-down m3 l2 vertical-container" style="z-index: 1000;">
