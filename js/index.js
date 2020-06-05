@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     // Event listeners
     $("#resume-button").on("click", function () {
-        window.open("./assets/pdfs/Resume.pdf");
+        window.open("./assets/pdfs/resume.pdf");
     });
     
     $(document.body).on("dblclick", ".carousel-item", function () {
