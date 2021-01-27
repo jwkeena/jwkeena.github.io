@@ -8,8 +8,11 @@
     <meta name="description" content="" />
 
     <!-- Progress bar must be loaded first -->
-    <!-- <script data-pace-options='{"ajax": false, "eventLag": false, "elements": false}' src="./js/pace.min.js"></script>
-    <link href="./assets/css/progressbar.css" rel="stylesheet"> -->
+    <script
+      data-pace-options='{"ajax": false, "eventLag": false, "elements": false}'
+      src="./js/pace.min.js"
+    ></script>
+    <link href="./assets/css/progressbar.css" rel="stylesheet" />
 
     <!-- Favicon -->
     <link
@@ -69,7 +72,26 @@
     />
   </head>
 
-  <body>
+  <style>
+    main {
+      opacity: 0;
+    }
+
+    main.all-loaded {
+      opacity: 1;
+      transition: ease-in 1s;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function revealPage() {
+      const main = document.getElementsByTagName("main")[0];
+      main.classList.add("all-loaded");
+      Pace.stop;
+    }
+  </script>
+
+  <body onload="revealPage()">
     <main>
       <!-- Side Navigation -->
       <div
@@ -114,35 +136,33 @@
             data-link="https://pokemonboosterpack.neocities.org"
             href="#a"
           >
-            <img
-              src="assets/images/pokemon-demo-new.gif"
-            />
+            <img src="assets/images/pokemon-demo-new.gif" />
           </a>
           <a
-          class="carousel-item"
-          title="double-click to open demo links"
-          data-link="https://jwkeena.github.io/the-office-character-guessing-game/"
-          href="#a"
+            class="carousel-item"
+            title="double-click to open demo links"
+            data-link="https://jwkeena.github.io/the-office-character-guessing-game/"
+            href="#a"
           >
-          <img src="assets/images/office-demo.gif" />
-        </a>
-        <a
-          class="carousel-item"
-          title="double-click to open demo links"
-          data-link="https://jwkeena.github.io/super-coin-collector/"
-          href="#a"
-        >
-          <img src="assets/images/super-coin-collector-demo.gif" />
-        </a>
-        <a
-        class="carousel-item"
-        title="double-click to open demo links"
-        data-link="https://virtualbacklog.herokuapp.com/"
-        href="#a"
-        >
-        <img src="assets/images/virtual-backlog-demo.gif" />
-      </a>
-    </div>
+            <img src="assets/images/office-demo.gif" />
+          </a>
+          <a
+            class="carousel-item"
+            title="double-click to open demo links"
+            data-link="https://jwkeena.github.io/super-coin-collector/"
+            href="#a"
+          >
+            <img src="assets/images/super-coin-collector-demo.gif" />
+          </a>
+          <a
+            class="carousel-item"
+            title="double-click to open demo links"
+            data-link="https://virtualbacklog.herokuapp.com/"
+            href="#a"
+          >
+            <img src="assets/images/virtual-backlog-demo.gif" />
+          </a>
+        </div>
       </div>
 
       <!-- About Me Header -->
@@ -254,10 +274,11 @@
           <div class="row valign-wrapper">
             <div class="col s12 l12">
               <p>
-                I'm a web developer and professor of Ancient Philosophy passionate about transforming precise,
-                logical syntax (both modern and archaic) into meaning and ideas.
-                I work in the full .NET and MERN stacks. My languages of choice
-                are JavaScript, C#, HTML, CSS, Latin, and Ancient Greek.
+                I'm a web developer and professor of Ancient Philosophy
+                passionate about transforming precise, logical syntax (both
+                modern and archaic) into meaning and ideas. I work in the full
+                .NET and MERN stacks. My languages of choice are JavaScript, C#,
+                HTML, CSS, Latin, and Ancient Greek.
               </p>
             </div>
           </div>
@@ -279,8 +300,8 @@
           <div class="row valign-wrapper">
             <div class="col s12 l12">
               <p>
-                I'm proficient in front-end tech (React, Blazor, jQuery, jQuery UI,
-                Backbone, Bootstrap, Materialize, Kendo UI), back-end tech
+                I'm proficient in front-end tech (React, Blazor, jQuery, jQuery
+                UI, Backbone, Bootstrap, Materialize, Kendo UI), back-end tech
                 (Node, Express, ASP.NET MVC, MongoDB, Mongoose, MySQL,
                 Sequelize, Entity Framework, Firebase), Git version control, and
                 Azure DevOps, with a special focus on smoothly interactive UI
@@ -656,10 +677,8 @@
             </p>
 
             <div class="col s11">
-              <p class="col
-              ">}</p>
+              <p class="col">}</p>
             </div>
-
           </div>
 
           <div id="modal-image-labeler" class="modal modal-fixed-footer center">
@@ -779,10 +798,10 @@
                     >
                     to convert the ~4,000 pages of Microsoft Word files of
                     Lewis' three volumes of Collected Letters from their native
-                    XML into JS objects, I then built the search engine
-                    and mobile-responsive UI. Searches can be performed
-                    for word matches as well as any combination of recipient,
-                    year(s), volume(s), and archival location.
+                    XML into JS objects, I then built the search engine and
+                    mobile-responsive UI. Searches can be performed for word
+                    matches as well as any combination of recipient, year(s),
+                    volume(s), and archival location.
                   </p>
                 </div>
                 <div class="col m12 l6">
@@ -843,7 +862,8 @@
                   <p><b>TECH:</b> Vanilla JS (+ a bit of jQuery), HTML, CSS</p>
                   <p>
                     <b>DESCRIPTION:</b> A passion project to capture the
-                    experience of opening new packs of the best CCG there ever was.
+                    experience of opening new packs of the best CCG there ever
+                    was.
                   </p>
                 </div>
                 <div class="col m12 l6">
@@ -971,7 +991,10 @@
               <hr />
               <div class="row">
                 <div class="col sm12 l6 left-align">
-                  <p><b>TECH:</b> Vanilla JavaScript (+ a bit of jQuery), HTML, CSS</p>
+                  <p>
+                    <b>TECH:</b> Vanilla JavaScript (+ a bit of jQuery), HTML,
+                    CSS
+                  </p>
                   <p>
                     <b>DESCRIPTION:</b> The only way to open original packs of
                     actual Pokemon cards is either to spend hundreds of dollars
@@ -983,7 +1006,8 @@
                       style="font-family: 'Montserrat', sans-serif"
                       target="_blank"
                       >most popular</a
-                    > sites on Neocities. Mobile responsive.
+                    >
+                    sites on Neocities. Mobile responsive.
                   </p>
                 </div>
                 <div class="col m12 l6">
@@ -1229,18 +1253,18 @@
           </div>
         </div>
       </div>
-    </main>
-
-    <footer>
-      <div id="end" class="center-align grey darken-1 section scrollspy">
-        <div class="section-header">
-          <span class="center-align amber-text text-lighten-5"
+      
+      <footer>
+        <div id="end" class="center-align grey darken-1 section scrollspy">
+          <div class="section-header">
+            <span class="center-align amber-text text-lighten-5"
             >connection . E N D ( );</span
-          >
+            >
+          </div>
         </div>
-      </div>
-    </footer>
-
+      </footer>
+    </main>
+      
     <!-- jQuery link -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
