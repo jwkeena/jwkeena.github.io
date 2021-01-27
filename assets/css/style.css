@@ -2,6 +2,23 @@ html {
   background-color: #fff8e1
 }
 
+body,
+a {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 2rem;
+  margin: 0;
+}
+
+.loading {
+  background: transparent url('../images/spinner.gif') center no-repeat;
+}
+
 .dot {
   height: 170px;
   width: 170px;
@@ -12,11 +29,11 @@ html {
   mix-blend-mode: normal;
 }
 
-.move-down  {
+.move-down {
   top: 40px !important;
 }
 
-.vertical-container { 
+.vertical-container {
   position: relative;
 }
 
@@ -28,14 +45,6 @@ html {
   transform: translateY(-50%);
 }
 
-body,
-a {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .tech-logo {
   height: 40px;
 }
@@ -45,7 +54,8 @@ a {
   font-size: 2.1rem;
 }
 
-.btn-large, .btn-large:focus {
+.btn-large,
+.btn-large:focus {
   background-color: goldenrod;
   margin-right: 1px;
   margin-left: 5px;
@@ -104,15 +114,10 @@ a {
   top: 10px;
 }
 
-p {
-  line-height: 2rem;
-  margin: 0;
-}
-
 .project-title {
- font-weight: bold;
- color: goldenrod;
- 
+  font-weight: bold;
+  color: goldenrod;
+
 }
 
 .portfolio a:link {
