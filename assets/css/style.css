@@ -15,10 +15,6 @@ p {
   margin: 0;
 }
 
-.loading {
-  background: transparent url('../images/spinner.gif') center no-repeat;
-}
-
 .dot {
   height: 170px;
   width: 170px;
