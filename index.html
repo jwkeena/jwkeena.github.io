@@ -72,13 +72,18 @@
     />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMK4HY02C6"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YMK4HY02C6"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-YMK4HY02C6');
+      gtag("config", "G-YMK4HY02C6");
     </script>
   </head>
 
@@ -135,22 +140,6 @@
           <a
             class="carousel-item"
             title="double-click to open demo links"
-            data-link="https://pokemonboosterpack.com"
-            href="#a"
-          >
-            <img src="assets/images/pokemon-demo-new.gif" />
-          </a>
-          <a
-            class="carousel-item"
-            title="double-click to open demo links"
-            data-link="https://jwkeena.github.io/the-office-character-guessing-game/"
-            href="#a"
-          >
-            <img src="assets/images/office-demo.gif" />
-          </a>
-          <a
-            class="carousel-item"
-            title="double-click to open demo links"
             data-link="https://jwkeena.github.io/super-coin-collector/"
             href="#a"
           >
@@ -165,13 +154,29 @@
             <img src="assets/images/virtual-backlog-demo.gif" />
           </a>
           <a
-          class="carousel-item"
-          title="double-click to open demo links"
-          data-link="https://csl.neocities.org/"
-          href="#a"
-        >
-          <img src="assets/images/csl-demo.gif" />
-        </a>
+            class="carousel-item"
+            title="double-click to open demo links"
+            data-link="https://csl.neocities.org/"
+            href="#a"
+          >
+            <img src="assets/images/csl-demo.gif" />
+          </a>
+          <a
+            class="carousel-item"
+            title="double-click to open demo links"
+            data-link="https://pokemonboosterpack.com"
+            href="#a"
+          >
+            <img src="assets/images/pokemon-demo-new.gif" />
+          </a>
+          <a
+            class="carousel-item"
+            title="double-click to open demo links"
+            data-link="https://jwkeena.github.io/the-office-character-guessing-game/"
+            href="#a"
+          >
+            <img src="assets/images/office-demo.gif" />
+          </a>
         </div>
       </div>
 
@@ -276,12 +281,12 @@
           <div class="row valign-wrapper">
             <div class="col s12 l12">
               <p>
-                I'm a web developer and occasional professor of Ancient Philosophy
-                who transforms precise, logical syntax (both
-                modern and archaic) into meaning and ideas. I work primarily with
-                .NET applications and JavaScript frameworks. 
-                My languages of choice are JavaScript, C#, SQL, HTML, CSS, 
-                Latin, and Ancient Greek.
+                I'm a web developer, C.S. Lewis scholar, and former professor of
+                Ancient Philosophy who transforms precise, logical syntax (both
+                modern and archaic) into meaning and ideas. I work primarily
+                with .NET applications and, less often these days, JavaScript
+                frameworks. My languages of choice are JavaScript, C#, SQL, and
+                Ancient Greek.
               </p>
             </div>
           </div>
@@ -290,12 +295,13 @@
             <div class="col s12 l12">
               <p>
                 I leverage my background in higher education and the humanities
-                to improve the whole development process. My knowledge of
-                ancient languages and MA in English have habituated me to
-                the complex syntax and granular linguistic detail of coding.
-                Years of experience as an Oxford-trained professor of philosophy
-                makes the high-level problem solving, conceptual abstraction,
-                and skill in logic demanded of developers natural to me.
+                to improve the whole software development life cycle. Years of
+                experience as an Oxford-trained professor of philosophy makes
+                the logical problem solving, effective communication, and
+                conceptual abstraction demanded of developers natural to me.
+                Likewise my knowledge of ancient languages and MA in English
+                have habituated me to the complex syntax and granular linguistic
+                detail of coding.
               </p>
             </div>
           </div>
@@ -303,20 +309,19 @@
           <div class="row valign-wrapper">
             <div class="col s12 l12">
               <p>
-                I'm proficient in front-end tech (React, Blazor, jQuery, jQuery
-                UI, Bootstrap, Materialize, Kendo UI), back-end tech
-                (Node, Express, ASP.NET MVC, SQL, Entity Framework, Firebase, MongoDB), Git version control, and
-                Azure DevOps, with a special focus on smoothly interactive UI
-                components. I've graduated from the University of New
-                Hampshire's
+                My current role demands skill in project management, stakeholder
+                communication, and DevOps-related tasks, centered on
+                applications developed with Microsoft tech (Blazor WASM, SQL
+                Server, ASP.NET MVC, Entity Framework). I've graduated from the
+                University of New Hampshire's
                 <a
                   href="https://unh.credly.com/member-badges/21878570"
                   target="_blank"
                   >Full Stack Web Development</a
                 >
-                program, Oxford University (MSt in Ancient Philosophy), and the Catholic University of America
-                (MA in English). I currently work as an Application UI Developer
-                at P&R Dental Strategies.
+                program, Oxford University (MSt in Ancient Philosophy), and the
+                Catholic University of America (MA in English). I currently work
+                as a Web Developer at Fluent (formerly P&R Dental Strategies).
               </p>
             </div>
           </div>
@@ -348,11 +353,11 @@
                 src="assets/images/logo-js.png"
                 title="JavaScript"
               />
-              <img
+              <!-- <img
                 class="tech-logo"
                 src="assets/images/logo-mongodb.png"
                 title="MongoDB"
-              />
+              /> -->
               <img
                 class="tech-logo"
                 src="assets/images/logo-node.png"
@@ -463,11 +468,9 @@
             <p class="col offset-s1 s11">
               <a class="project-title monospace modal-trigger" href="#modal-csl"
                 >"C.S. Lewis Letter Search"</a
-              >: {links: <a
-                href="https://csl.neocities.org/"
-                target="_blank"
-                >"demo"</a
-              >, passwordProtected: true},
+              >: {link:
+              <a href="https://csl.neocities.org/" target="_blank">"demo"</a>,
+              passwordProtected: true},
             </p>
 
             <p class="col offset-s1 s11">
@@ -507,7 +510,8 @@
             <p class="col offset-s1 s11">
               <a class="project-title modal-trigger" href="#modal-node-liri"
                 >"Node Movie, Song, & Concert Search"</a
-              >: {links: <a href="https://github.com/jwkeena/liri-node-app" target="_blank"
+              >: {link:
+              <a href="https://github.com/jwkeena/liri-node-app" target="_blank"
                 >"code"</a
               >},
             </p>
@@ -517,7 +521,8 @@
                 class="project-title modal-trigger"
                 href="#modal-node-storefront"
                 >"Node Storefront"</a
-              >: {links: <a href="https://github.com/jwkeena/bamazon" target="_blank"
+              >: {link:
+              <a href="https://github.com/jwkeena/bamazon" target="_blank"
                 >"code"</a
               >},
             </p>
@@ -526,7 +531,7 @@
               <a class="project-title modal-trigger" href="#modal-plato-texts"
                 >"Plato Texts (npm package)"</a
               >: {links: [<a
-                href="https://npm.runkit.com/plato-texts"
+                href="https://runkit.com/npm/plato-texts"
                 target="_blank"
                 >"demo"</a
               >,
@@ -570,16 +575,12 @@
             <p class="col offset-s1 s11">
               <a class="project-title modal-trigger" href="#modal-sequelize"
                 >"Sequelize Me Captain!"</a
-              >: {links: [<a
-                href="https://cerealtracker.onrender.com/"
-                target="_blank"
-                >"demo"</a
-              >,
+              >: {link:
               <a
                 href="https://github.com/jwkeena/sequelize-me-captain"
                 target="_blank"
                 >"code"</a
-              >], fullStack: true},
+              >, fullStack: true},
             </p>
 
             <p class="col offset-s1 s11">
@@ -605,7 +606,7 @@
                 href="#modal-superhero-dating"
                 >"Superhero Dating App"</a
               >: {links: [<a
-                href="hthttps://superherosingles.onrender.com"
+                href="https://superherosingles.onrender.com"
                 target="_blank"
                 >"demo"</a
               >,
@@ -697,11 +698,11 @@
                 <div class="col sm12 l6 left-align">
                   <p><b>TECH:</b> jQuery, HTML, CSS</p>
                   <p>
-                    <b>DESCRIPTION:</b> Built to solve two problems: 1) to
-                    create randomly generated quiz questions, instead of fixed
-                    and predictable ones; and 2) for practice with the
-                    setTimeout() and setInterval() methods. Hence the app
-                    reinforces knowledge of all regular Greek nouns with
+                    <b>DESCRIPTION:</b> This application was built to solve two
+                    problems: 1) to create randomly generated quiz questions,
+                    instead of fixed and predictable ones; and 2) for practice
+                    with the setTimeout() and setInterval() methods. Hence the
+                    app reinforces knowledge of all regular Greek nouns with
                     time-based, programmatically generated parsing questions.
                     Designed for desktop, but mobile compatible.
                   </p>
@@ -762,7 +763,8 @@
                   <p><b>TECH: </b>XML, jQuery, Materialize</p>
                   <p>
                     <b>DESCRIPTION: </b> Using Google Books or Amazon's "Look
-                    Inside" feature to search through massive, multi-volume
+                    Inside" feature to search through Lewis's massive, three
+                    volume <i>Collected Letters</i>
                     works is too fragmentary and inefficient. After writing a
                     <a
                       href="https://github.com/jwkeena/microsoft-word-xml-to-json-converter"
@@ -770,16 +772,14 @@
                       style="font-family: 'Montserrat', sans-serif"
                       >custom parser</a
                     >
-                    to convert the data to something machine-readable, I then built the search engine and
-                    mobile-responsive UI. Searches can be performed for word
-                    matches as well as any combination of recipient, year(s),
-                    volume(s), and archival location.
+                    to convert the data to something machine-readable, I then
+                    built the search engine and mobile-responsive UI. Searches
+                    can be performed for word matches as well as any combination
+                    of recipient, year(s), volume(s), and archival location.
                   </p>
                 </div>
                 <div class="col m12 l6">
-                  <a
-                    href="https://csl.neocities.org/"
-                    target="_blank"
+                  <a href="https://csl.neocities.org/" target="_blank"
                     ><img
                       class="responsive-img"
                       src="assets/images/csl-demo.gif"
@@ -805,8 +805,8 @@
                     fragmentary, that are, for the most part, not available in
                     the many well-known and accessible volumes of his writings
                     edited by Walter Hooper. Texts are sortable by year, title,
-                    reference, and type. Types (prose, letters, blurbs, diary entries,
-                    and poems) are also filterable.
+                    reference, and type. Types (prose, letters, blurbs,
+                    annotations, diary entries, and poems) are also filterable.
                   </p>
                 </div>
                 <div class="col m12 l6">
@@ -866,17 +866,12 @@
                     calls from the back end, this command line Node app allows
                     the user to search for info on movies, songs, and upcoming
                     concerts. Searches are saved in a .txt file and can be
-                    recalled. Demo video link provided; to run it yourself,
-                    download the GitHub repo and run npm install in the
-                    terminal.
+                    recalled. To run the application yourself, download the
+                    GitHub repo and run npm install in the terminal.
                   </p>
                 </div>
                 <div class="col m12 l6">
-                  <a
-                    href="https://drive.google.com/file/d/1SV45M03akrh0nR7AlrjP2PxALx-rMbqO/view"
-                    target="_blank"
-                    ><img class="responsive-img" src="assets/images/liri.png"
-                  /></a>
+                  <img class="responsive-img" src="assets/images/liri.png" />
                 </div>
               </div>
             </div>
@@ -904,13 +899,7 @@
                   </p>
                 </div>
                 <div class="col m12 l6">
-                  <a
-                    href="https://drive.google.com/file/d/1KzOt9NHjUq0uLC11X_cb-G76anPPUJuz/view"
-                    target="_blank"
-                    ><img
-                      class="responsive-img"
-                      src="assets/images/bamazon.png"
-                  /></a>
+                  <img class="responsive-img" src="assets/images/bamazon.png" />
                 </div>
               </div>
             </div>
@@ -963,10 +952,7 @@
               <hr />
               <div class="row">
                 <div class="col sm12 l6 left-align">
-                  <p>
-                    <b>TECH:</b> Vanilla JavaScript (+ a bit of jQuery), HTML,
-                    CSS
-                  </p>
+                  <p><b>TECH:</b> Vanilla JS (+ a bit of jQuery), HTML, CSS</p>
                   <p>
                     <b>DESCRIPTION:</b> The only way to open original packs of
                     actual Pokemon cards is either to spend hundreds of dollars
@@ -974,7 +960,7 @@
                     wanted to recreate that experience virtually and for free.
                     It's now one of the
                     <a
-                      href="https://neocities.org/browse?sort_by=views&tag="
+                      href="https://neocities.org/site/pokemonboosterpack"
                       style="font-family: 'Montserrat', sans-serif"
                       target="_blank"
                       >most viewed</a
@@ -983,9 +969,7 @@
                   </p>
                 </div>
                 <div class="col m12 l6">
-                  <a
-                    href="https://pokemonboosterpack.com"
-                    target="_blank"
+                  <a href="https://pokemonboosterpack.com" target="_blank"
                     ><img
                       class="responsive-img"
                       src="assets/images/pokemon-demo-new.gif"
@@ -1053,11 +1037,7 @@
                   </p>
                 </div>
                 <div class="col m12 l6">
-                  <a
-                    href="https://cerealtracker.onrender.com/"
-                    target="_blank"
-                    ><img class="responsive-img" src="assets/images/cereal.png"
-                  /></a>
+                  <img class="responsive-img" src="assets/images/cereal.png" />
                 </div>
               </div>
             </div>
@@ -1209,9 +1189,7 @@
                   </p>
                 </div>
                 <div class="col m12 l6">
-                  <a
-                    href="https://virtualbacklog.onrender.com/"
-                    target="_blank"
+                  <a href="https://virtualbacklog.onrender.com/" target="_blank"
                     ><img
                       class="responsive-img"
                       src="assets/images/virtual-backlog-demo.gif"
@@ -1225,18 +1203,18 @@
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div id="end" class="center-align grey darken-1 section scrollspy">
           <div class="section-header">
             <span class="center-align amber-text text-lighten-5"
-            >connection . E N D ( );</span
+              >connection . E N D ( );</span
             >
           </div>
         </div>
       </footer>
     </main>
-      
+
     <!-- jQuery link -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
